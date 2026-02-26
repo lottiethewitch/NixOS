@@ -25,7 +25,7 @@
       plugins = [
         "git"         # also requires `programs.git.enable = true;`
     ];
-      theme = "robbyrussell";
+      theme = "agnoster";
     };
   };
  
