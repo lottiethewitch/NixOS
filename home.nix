@@ -1,8 +1,5 @@
 { config, pkgs, ... }:
 {
-  imports =  [
-   nvim.nix
-  ];
   # Home Manager needs a bit of information about you and the paths it should
   # manage.
   home.username = "lottie";
@@ -28,7 +25,13 @@
       theme = "agnoster";
     };
   };
- 
+  
+  programs.direnv = {
+    enable = true;
+    nix-direnv.enable = true;
+  };
+
+
   home.stateVersion = "25.11"; # Please read the comment before changing.
 
   programs.git = {
