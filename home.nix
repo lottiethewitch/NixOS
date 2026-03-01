@@ -85,4 +85,19 @@
 
   # Let Home Manager install and manage itself.
   programs.home-manager.enable = true;
+
+
+    home.extraProfileCommands = ''
+      if [[ -w $out/share/mime && -w $out/share/mime/packages && -d $out/share/mime/packages ]]; then
+        XDG_DATA_DIRS=$out/share \
+        PKGSYSTEM_ENABLE_FSYNC=0 \
+        ${pkgs.buildPackages.shared-mime-info}/bin/update-mime-database \
+          -V $out/share/mime > /dev/null
+      fi
+
+      if [[ -w $out/share/applications ]]; then
+        ${pkgs.buildPackages.desktop-file-utils}/bin/update-desktop-database \
+          $out/share/applications
+      fi
+    '';
 }
