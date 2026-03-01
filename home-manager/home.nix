@@ -82,6 +82,8 @@
     # EDITOR = "emacs";
   };
 
+  systemd.user.startServices = "sd-switch";
+
   # Let Home Manager install and manage itself.
   programs.home-manager.enable = true;
 
