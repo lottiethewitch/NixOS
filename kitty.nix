@@ -1,4 +1,4 @@
-{ libs, ... }:
+{ lib, ... }:
 
 {
 programs.kitty = lib.mkForce {
