@@ -2,8 +2,8 @@
 {
 
   imports = [
-    nvim.nix
-    kitty.nix
+   ./nvim.nix
+   ./kitty.nix
   ];
 
 
