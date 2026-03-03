@@ -4,7 +4,7 @@
    neovim
    devenv
    direnv
-   vscode
+   vscode-fhs
    jetbrains.rust-rover
    jetbrains.clion
    ];
