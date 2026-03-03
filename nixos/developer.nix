@@ -6,6 +6,7 @@
    direnv
    vscode
    jetbrains.rust-rover
+   jetbrains.clion
    ];
  
 }
