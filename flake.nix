@@ -31,7 +31,10 @@
       vader = nixpkgs.lib.nixosSystem {
         specialArgs = {inherit inputs;};
         # > Our main nixos configuration file <
-        modules = [./nixos/configuration.nix];
+        modules = with inputs; [
+          ./nixos/configuration.nix
+          nixvim.homeManagerModules.nixvim
+        ];
       };
     };
 
