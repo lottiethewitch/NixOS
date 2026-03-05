@@ -12,7 +12,6 @@
       ./gnome.nix
       ./developer.nix
       ./zsh.nix
-      ./git.nix
     ];
   # Bootloader.
   boot.loader.systemd-boot.enable = true;
