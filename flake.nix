@@ -21,6 +21,7 @@
     self,
     nixpkgs,
     home-manager,
+    nixvim,
     ...
   } @ inputs: let
   in {
@@ -33,7 +34,6 @@
         # > Our main nixos configuration file <
         modules = with inputs; [
           ./nixos/configuration.nix
-          nixvim.homeManagerModules.nixvim
         ];
       };
     };
@@ -47,7 +47,9 @@
         pkgs = nixpkgs.legacyPackages.x86_64-linux; # FIXME replace x86_64-linux with your architecure 
         extraSpecialArgs = {inherit inputs;};
         # > Our main home-manager configuration file <
-        modules = [./home-manager/home.nix];
+        modules = [
+          ./home-manager/home.nix
+          ];
       };
     };
   };
