@@ -129,10 +129,10 @@
 
 
   # Install steam, discord
-  #programs.steam = { 
-#    enable = true;
- #       localNetworkGameTransfers.openFirewall = true;    
- # };
+  programs.steam = { 
+    enable = true;
+    localNetworkGameTransfers.openFirewall = true;    
+  };
 
   services.flatpak.enable = true;
 
