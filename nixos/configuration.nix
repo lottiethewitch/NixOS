@@ -131,6 +131,7 @@
   # Install steam, discord
   programs.steam = { 
 	enable = true;
+        localNetworkGameTransfers.openFirewall = true;    
   };
 
   services.flatpak.enable = true;
@@ -143,7 +144,6 @@
   # $ nix search wget
   environment.systemPackages = with pkgs; [
   vim # Do not forget to add an editor to edit configuration.nix! The Nano editor is also installed by default.
-  steam
   terminator
   calibre
   libimobiledevice
