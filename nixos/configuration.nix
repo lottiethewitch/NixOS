@@ -158,6 +158,7 @@
   adwaita-icon-theme
   htop
   obsidian
+  xivlauncher
   ];
 
   # Some programs need SUID wrappers, can be configured further or are
