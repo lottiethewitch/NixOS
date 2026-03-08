@@ -12,6 +12,7 @@
       ./gnome.nix
       ./developer.nix
       ./zsh.nix
+      ./postgres.nix
     ];
   # Bootloader.
   boot.loader.systemd-boot.enable = true;
