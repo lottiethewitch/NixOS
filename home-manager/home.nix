@@ -3,7 +3,6 @@
 
   imports = [
     ./kitty.nix
-    ./nixvim/nixvim.nix
   ];
 
 
