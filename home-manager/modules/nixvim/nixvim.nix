@@ -5,11 +5,6 @@
    inputs.nixvim.homeModules.nixvim
   ];
   programs.nixvim = {
-    enable = true;
-    defaultEditor = true;
-    nixpkgs.useGlobalPackages = true;
-    luaLoader.enable = true;
-
     extraPackages = with pkgs; [
       ripgrep
       lazygit
