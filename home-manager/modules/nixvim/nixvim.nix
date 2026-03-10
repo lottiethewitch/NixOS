@@ -6,6 +6,9 @@
   ];
   programs.nixvim = {
     enable = true;
+    defaultEditor = true;
+    nixpkgs.useGlobalPackages = true;
+    luaLoader.enable = true;
 
     extraPackages = with pkgs; [
       ripgrep
@@ -14,17 +17,12 @@
       gcc
       nodejs
       tree-sitter
-
       solargraph
       elixir-ls
       lua-language-server
     ];
   };
   
-  opts = {
-
-  };
-
   plugins = {
       diffview-nvim.enable = true;
       gitsigns.enable = true;
