@@ -1,7 +1,7 @@
 { pkgs, ... }:
 
 {
-services.udev.packages = [ pkgs.yubikey-personalization ];
+services.yubikey-agent.enable = true;
 
 services.gpg-agent = {
   enable = true;
