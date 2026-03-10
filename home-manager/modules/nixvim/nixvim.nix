@@ -49,7 +49,11 @@
       lsp = {
         enable = true;
         servers = {
-          rust_analyzer.enable = true;
+          rust_anayzer = {
+            enable = true;
+            installCargo = true;
+            installRustc = true;        
+          };  
           elixirls.enable = true;
           solargraph = {
             enable = true;
