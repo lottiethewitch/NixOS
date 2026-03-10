@@ -45,7 +45,6 @@
 
       bufferline.enable = true;
       lualine.enable = true;
-      diffview.enable = true;
       
       lsp = {
         enable = true;
