@@ -31,6 +31,10 @@
       theme = "agnoster";
     };
   };
+
+  programs.neovim = {
+    enable = true;
+  };
   
   programs.direnv = {
     enable = true;
