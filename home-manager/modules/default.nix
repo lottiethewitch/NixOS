@@ -11,6 +11,5 @@
     ./git.nix
     ./yubikey.nix
     ./kitty.nix
-    ./zsh.nix
   ];
 }
