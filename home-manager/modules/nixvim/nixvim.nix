@@ -49,7 +49,7 @@
       lsp = {
         enable = true;
         servers = {
-          rust_anayzer = {
+          rust_analyzer = {
             enable = true;
             installCargo = true;
             installRustc = true;        
