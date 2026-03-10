@@ -21,7 +21,6 @@
       elixir-ls
       lua-language-server
     ];
-  };
   
   plugins = {
       diffview-nvim.enable = true;
