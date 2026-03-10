@@ -23,7 +23,7 @@
     ];
   
   plugins = {
-      diffview-nvim.enable = true;
+      diffview.enable = true;
       gitsigns.enable = true;
       
       fzf-lua = {
