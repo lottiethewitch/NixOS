@@ -72,7 +72,6 @@
         enable = true;
         nixGrammars = true;
         folding.enable = true;
-        highlight.enable = true;
         indent.enable = true;
         grammarPackages = with pkgs.vimPlugins.nvim-treesitter.builtGrammars; [
           ruby
