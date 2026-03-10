@@ -3,9 +3,9 @@
 {
 services.udev.packages = [ pkgs.yubikey-personalization ];
 
-programs.gnupg.agent = {
+services.gpg-agent = {
   enable = true;
-  enableSSHSupport = true;
+  enableSshSupport = true;
+  enableZshIntegration = true;
 };
-
 }
