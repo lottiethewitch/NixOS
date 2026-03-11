@@ -72,7 +72,7 @@
       lualine.enable = true;
       
       lsp = {
-        inlayHints.enable = true;
+        inlayHints = true;
         enable = true;
         servers = {
           rust_analyzer = {
