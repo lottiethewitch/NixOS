@@ -29,8 +29,6 @@
     ];
   
   plugins = {
-
-      web-devicons.enable = true;
       diffview.enable = true;
       gitsigns.enable = true;
 
@@ -108,8 +106,10 @@
         autoLoad = true;
       };
 
-      rainbow.enable = true;
-
+      rainbow = {
+	enable = true;
+      	autoLoad = true;
+      };
 
       treesitter = {
         enable = true;
@@ -141,6 +141,10 @@
         ];
       };
       telescope.enable = true;
+      web-devicons = {
+	enable = true;
+	autoLoad = true;
+      };
     };
   };
 }
