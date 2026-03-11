@@ -33,6 +33,21 @@
       web-devicons.enable = true;
       diffview.enable = true;
       gitsigns.enable = true;
+
+      cmp = {
+        autoEnableSources = true;
+        settings.sources = [
+          { name = "nvim_lsp"; }
+          { name = "path"; }
+          { name = "buffer"; }
+        ];
+      };
+
+      cmake-tools.enable = true;
+
+      colorizer.enable = true;
+
+      dap.enable = true;
       
       fzf-lua = {
         enable = true;
@@ -51,10 +66,13 @@
         };
       };
 
+      harpoon.enable = true;
+
       bufferline.enable = true;
       lualine.enable = true;
       
       lsp = {
+        inlayHints.enable = true;
         enable = true;
         servers = {
           rust_analyzer = {
@@ -72,12 +90,25 @@
               "Rakefile"
             ];
           };
+          csharp_ls.enable = true;
+          java_language_server.enable = true;
+          html.enable = true;
+          kotlin_language_server.enable = true;
           ts_ls.enable = true;
           eslint.enable = true;
           nil_ls.enable = true;
           lua_ls.enable = true;
         };
       };
+
+      marks.enable = true;
+
+      nvim-tree = {
+        enable = true;
+        autoLoad = true;
+      };
+
+      rainbow.enable = true;
 
 
       treesitter = {
@@ -109,6 +140,7 @@
           nix
         ];
       };
+      telescope.enable = true;
     };
   };
 }
