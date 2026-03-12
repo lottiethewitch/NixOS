@@ -7,7 +7,6 @@
   imports =
     [ # Include the results of the hardware scan.
       ./hardware-configuration.nix
-      ./firefox.nix
       ./nvidia.nix
       ./gnome.nix
       ./developer.nix
@@ -16,8 +15,8 @@
     ];
   # Bootloader.
   boot.loader.systemd-boot.enable = true;
-  boot.loader.efi.canTouchEfiVariables = true;
-
+  boot.loader.efi.canTouchEfiVariables = true
+	
   nix = let
     flakeInputs = lib.filterAttrs (_: lib.isType "flake") inputs;
   in {
