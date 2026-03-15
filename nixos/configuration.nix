@@ -160,6 +160,7 @@
   obsidian
   xivlauncher
   wine-staging
+  xclip
   ];
 
   # Some programs need SUID wrappers, can be configured further or are
