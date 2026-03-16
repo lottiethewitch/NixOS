@@ -161,6 +161,7 @@
   xivlauncher
   wine-staging
   xclip
+  krita
   ];
 
   # Some programs need SUID wrappers, can be configured further or are
