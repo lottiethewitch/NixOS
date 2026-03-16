@@ -99,6 +99,11 @@
         };
       };
 
+      luasnip = {
+	enable = true;
+	autoLoad = true;
+      };
+
       marks.enable = true;
 
       nvim-tree = {
