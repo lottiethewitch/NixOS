@@ -79,6 +79,11 @@
     LC_TIME = "en_US.UTF-8";
   };
 
+  # Wacom tablets
+  hardware.opentabletdriver.enable = true;
+  hardware.uinput.enable = true;
+  boot.kernelModules = [ "uinput" ];
+
   # Enable the X11 windowing system.
   # You can disable this if you're only using the Wayland session.
   # services.xserver.enable = true;
