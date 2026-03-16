@@ -167,6 +167,7 @@
   wine-staging
   xclip
   krita
+  kdePackages.wacomtablet
   ];
 
   # Some programs need SUID wrappers, can be configured further or are
