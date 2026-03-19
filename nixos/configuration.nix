@@ -101,7 +101,7 @@
 
   # Enable CUPS to print documents.
   services.printing.enable = true;
-
+  # DO NOT TOUCH
   # Enable sound with pipewire.
   services.pulseaudio.enable = false;
   security.rtkit.enable = true;
