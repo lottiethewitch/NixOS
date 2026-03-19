@@ -1,10 +1,10 @@
 #! /usr/bin/env nix-shell
 #! nix-shell -i bash -p bash
 
-MSG = "Automated git commit message at %(%Y-%m-%d %H:%M:%S)T\n"
+MSG="Automated git commit message at %(%Y-%m-%d %H:%M:%S)T\n"
 
 git add -A
-git commit $MSG
+git commit -m "$MSG"
 
 # Options h or s please choose one
 while getopts "h:s:" opt; do
