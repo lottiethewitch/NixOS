@@ -1,7 +1,7 @@
 #! /usr/bin/env nix-shell
 #! nix-shell -i bash -p bash
-
-MSG="Automated git commit message at %(%Y-%m-%d %H:%M:%S)T\n"
+current_date=$(date+"%y-%m-%d-%t") 
+MSG="Automated git commit message at $current_date"
 
 git add -A
 git commit -m "$MSG"
