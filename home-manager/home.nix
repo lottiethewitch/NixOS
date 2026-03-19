@@ -12,7 +12,15 @@
   home.homeDirectory = "/home/lottie";
   
   programs.zsh = {
-  enable = true;
+    enable = true;
+
+    shellAliases = {
+      ll = "ls -l";
+      edit = "sudo -e";
+      sysup = "sudo nixos-rebuild switch --flake .#vader";
+      homeup = "home-manager switch --flake .#lottie@vader --show-trace";
+      dogit = "./home/lottie/Nix/nixscripts/gitcom.sh";
+    };
 
     # With Zplug:
     zplug = {
