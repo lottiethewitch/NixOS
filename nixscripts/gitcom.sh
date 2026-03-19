@@ -9,9 +9,15 @@ git commit $MSG
 # Options h or s
 while getopts "h:s:" opt; do
   case $opt in
-	h) home-manager switch --flake .#lottie@vader --show-trace
-	s) sudo nixos-rebuild switch --flake .#vader
-	\?) echo "Invalid option: -$OPTARG" ;;
+	h) 
+	  home-manager switch --flake .#lottie@vader --show-trace
+          ;;
+	s) 
+	  sudo nixos-rebuild switch --flake .#vader
+	  ;;
+	\?) 
+          echo "Invalid option: -$OPTARG" 
+	  ;;
   esac
 done
 
