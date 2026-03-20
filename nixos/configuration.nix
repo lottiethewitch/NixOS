@@ -170,6 +170,7 @@
   kdePackages.wacomtablet
   qbittorrent
   bottles
+  winetricks
   ];
 
   # Some programs need SUID wrappers, can be configured further or are
