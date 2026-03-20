@@ -43,7 +43,16 @@
   # Configure network proxy if necessary
   # networking.proxy.default = "http://user:password@proxy:port/";
   # networking.proxy.noProxy = "127.0.0.1,localhost,internal.domain";
+  # Virtualization
 
+  virtualization.libvirtd = {
+	enable = true;
+	qemu = {
+		package = pkgs.qemu_kvm;
+		runAsRoot = true;
+		swtpm.enable = true;
+	};
+  };
   # Enable networking
   networking.networkmanager.enable = true;
 
@@ -126,7 +135,7 @@
   users.users.lottie = {
     shell = pkgs.zsh;
     isNormalUser = true;
-    extraGroups = [ "wheel" "networkmanager" ]; 
+    extraGroups = [ "wheel" "networkmanager" "libvirtd" ]; 
   };
   programs.firefox.enable = true;
 
