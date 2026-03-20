@@ -9,5 +9,7 @@
    spice-gtk
    iptables
    dnsmasq
+   qemu
+   kvm
  ];
 }
