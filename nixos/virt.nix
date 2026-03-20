@@ -10,6 +10,6 @@
    iptables
    dnsmasq
    qemu
-   kvm
+   kvmtool
  ];
 }
