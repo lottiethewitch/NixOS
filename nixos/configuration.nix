@@ -12,6 +12,7 @@
       ./developer.nix
       ./zsh.nix
       ./postgres.nix
+      ./virt.nix
     ];
   # Bootloader.
   boot.loader.systemd-boot.enable = true;
