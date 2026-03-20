@@ -169,6 +169,7 @@
   krita
   kdePackages.wacomtablet
   qbittorrent
+  bottles
   ];
 
   # Some programs need SUID wrappers, can be configured further or are
