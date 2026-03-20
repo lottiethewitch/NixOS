@@ -7,7 +7,7 @@
    virt-viewer
    spice
    spice-gtk
-   iptabpes
+   iptables
    dnsmasq
  ];
 }
