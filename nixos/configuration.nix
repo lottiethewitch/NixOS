@@ -181,6 +181,7 @@
   qbittorrent
   bottles
   winetricks
+  htop
   ];
 
   # Some programs need SUID wrappers, can be configured further or are
