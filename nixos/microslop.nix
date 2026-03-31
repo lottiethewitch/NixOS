@@ -8,5 +8,6 @@
     wine64
     bottles
     cabextract
+    mono
   ];
 }
