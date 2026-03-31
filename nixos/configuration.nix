@@ -13,6 +13,7 @@
       ./zsh.nix
       ./postgres.nix
       ./virt.nix
+      ./microslop.nix
     ];
   # Bootloader.
   boot.loader.systemd-boot.enable = true;
@@ -180,8 +181,6 @@
   krita
   kdePackages.wacomtablet
   qbittorrent
-  bottles
-  winetricks
   htop
   ];
 
