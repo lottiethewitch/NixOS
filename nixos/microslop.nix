@@ -4,7 +4,7 @@
   environment.systemPackages = with pkgs; [
     wineWow64Packages.staging
     wine
-    wineWowPackages.WaylandFull
+    wineWowPackages.waylandFull
     winetricks
     bottles
     cabextract
