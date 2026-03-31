@@ -3,11 +3,10 @@
 {
   environment.systemPackages = with pkgs; [
     wineWow64Packages.staging
-    wine
     wineWowPackages.waylandFull
     winetricks
+    wine64
     bottles
     cabextract
-    wine-staging
   ];
 }
