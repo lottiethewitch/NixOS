@@ -10,6 +10,8 @@
    iptables
    dnsmasq
    qemu
+   docker
+   docker-compose
    kvmtool
  ];
 }

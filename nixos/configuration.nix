@@ -47,13 +47,18 @@
   # networking.proxy.noProxy = "127.0.0.1,localhost,internal.domain";
   # Virtualization
 
-  virtualisation.libvirtd = {
+  virtualisation = 
+     libvirtd = {
 	enable = true;
 	qemu = {
 		package = pkgs.qemu_kvm;
 		runAsRoot = true;
 		swtpm.enable = true;
 	};
+    };
+    docker = {
+	enable = true;
+    };
   };
   # Enable networking
   networking.networkmanager.enable = true;
@@ -137,7 +142,7 @@
   users.users.lottie = {
     shell = pkgs.zsh;
     isNormalUser = true;
-    extraGroups = [ "wheel" "networkmanager" "libvirtd" ]; 
+    extraGroups = [ "wheel" "networkmanager" "libvirtd" "docker" ]; 
   };
   programs.firefox.enable = true;
 
