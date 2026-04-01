@@ -11,5 +11,6 @@
     mono
     microsoft-edge
     geckodriver 
+    winboat
   ];
 }
