@@ -14,6 +14,7 @@
       ./postgres.nix
       ./virt.nix
       ./microslop.nix
+      ./art.nix
     ];
   # Bootloader.
   boot.loader.systemd-boot.enable = true;
@@ -183,8 +184,6 @@
   xivlauncher
   wine-staging
   xclip
-  krita
-  kdePackages.wacomtablet
   qbittorrent
   htop
   ];
