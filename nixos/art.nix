@@ -5,6 +5,5 @@
    krita
    kdePackages.wacomtablet
    blender
-   makehuman
  ];
 }
