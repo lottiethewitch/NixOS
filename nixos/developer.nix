@@ -6,6 +6,10 @@
    vscode-fhs
    jetbrains.rust-rover
    jetbrains.clion
+   jetbrains.idea
+   jetbrains.rider
+   kotlin
+   jetbrains.jdk
    ];
  
 }
