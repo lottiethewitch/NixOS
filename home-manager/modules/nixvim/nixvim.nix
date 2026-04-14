@@ -70,6 +70,7 @@
       lualine.enable = true;
       
       lsp = {
+        inlineCompletion = true;
         inlayHints = true;
         enable = true;
         servers = {
