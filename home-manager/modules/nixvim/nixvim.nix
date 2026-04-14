@@ -100,8 +100,6 @@
 	  jsonls.enable = true;
           nixd.enable = true;
 	  postgres_lsp.enable = true;
-	  ts_ls.enable = true;
-	  html.enable = true;
 	  cssls.enable = true;
         };
       };
