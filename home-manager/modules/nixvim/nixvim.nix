@@ -96,6 +96,13 @@
           eslint.enable = true;
           nil_ls.enable = true;
           lua_ls.enable = true;
+	  bashls.enable = true;
+	  jsonls.enable = true;
+          nixd.enable = true;
+	  postgres_lsp.enable = true;
+	  ts_ls.enable = true;
+	  html.enable = true;
+	  cssls.enable = true;
         };
       };
 
@@ -109,6 +116,7 @@
       nvim-tree = {
         enable = true;
         autoLoad = true;
+	openOnSetup = true;
       };
 
       rainbow = {
