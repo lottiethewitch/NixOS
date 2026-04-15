@@ -61,7 +61,11 @@
       enable = true;
       autoLoad = true;
     };
-      
+
+    emmet = {
+      enable = true;
+      autoLoad = true;
+    };
     fzf-lua = {
         enable = true;
         settings = {
