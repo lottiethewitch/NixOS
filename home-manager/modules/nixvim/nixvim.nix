@@ -29,10 +29,11 @@
     ];
   
   plugins = {
-      diffview.enable = true;
-      gitsigns.enable = true;
+   
+   diffview.enable = true;
+   gitsigns.enable = true;
 
-      cmp = {
+   cmp = {
         enable = true;
         autoEnableSources = true;
 	autoLoad = true;
@@ -47,13 +48,21 @@
     cmp-path.enable = true;
     cmp-buffer.enable = true;
 
-      cmake-tools.enable = true;
+    cmake-tools.enable = true;
 
-      colorizer.enable = true;
+    colorizer.enable = true;
 
-      dap.enable = true;
+    dap = {
+      enable = true;
+      autoLoad = true;
+    };
+
+    dap-ui = {
+      enable = true;
+      autoLoad = true;
+    };
       
-      fzf-lua = {
+    fzf-lua = {
         enable = true;
         settings = {
           winopts = {
