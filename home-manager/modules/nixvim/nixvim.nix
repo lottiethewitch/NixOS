@@ -107,7 +107,8 @@
               "Rakefile"
             ];
           };
-          csharp_ls.enable = true;
+          emmet_language_server.enable = true;
+	  csharp_ls.enable = true;
           java_language_server.enable = true;
           html.enable = true;
           kotlin_language_server.enable = true;
