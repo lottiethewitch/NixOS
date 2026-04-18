@@ -5,5 +5,6 @@
    krita
    kdePackages.wacomtablet
    blender
+   inkscape
  ];
 }
