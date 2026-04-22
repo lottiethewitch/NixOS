@@ -10,6 +10,7 @@
    jetbrains.rider
    kotlin
    jetbrains.jdk
+   gpt4all-cuda
    ];
  
 }
