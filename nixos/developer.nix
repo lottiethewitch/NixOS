@@ -11,6 +11,7 @@
    kotlin
    jetbrains.jdk
    ollama-cuda	
+   proxyman
    ];
  
 }
