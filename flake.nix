@@ -36,6 +36,13 @@
           ./nixos/configuration.nix
         ];
       };
+      anakin = nixpkgs.lib.nixosSystem {
+        specialArgs = {inherit inputs;};
+        # > Our main nixos configuration file <
+        modules = with inputs; [
+          ./nixos/configuration.nix
+        ];
+      };
     };
 
     # Standalone home-manager configuration entrypoint
