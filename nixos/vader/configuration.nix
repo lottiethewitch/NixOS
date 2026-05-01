@@ -6,15 +6,7 @@
 {
   imports =
     [ # Include the results of the hardware scan.
-      ./hardware-configuration.nix
-      ./nvidia.nix
-      ./gnome.nix
-      ./developer.nix
-      ./zsh.nix
-      ./postgres.nix
-      ./virt.nix
-      ./microslop.nix
-      ./art.nix
+     ../modules
     ];
   # Bootloader.
   boot.loader.systemd-boot.enable = true;
