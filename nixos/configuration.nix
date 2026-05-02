@@ -15,6 +15,7 @@
       ./virt.nix
       ./microslop.nix
       ./art.nix
+      ./music.nix
     ];
   # Bootloader.
   boot.loader.systemd-boot.enable = true;
