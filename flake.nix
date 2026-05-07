@@ -33,7 +33,7 @@
         specialArgs = {inherit inputs;};
         # > Our main nixos configuration file <
         modules = with inputs; [
-          ./nixos/configuration.nix
+          ./nixos/vader.nix
         ];
       };
 
