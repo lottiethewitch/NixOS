@@ -13,7 +13,6 @@
 	./gnome.nix
 	./haxxor.nix
 	./microslop.nix
-	./nvidia.nix
 	./postgres.nix
 	./virt.nix
 	./zsh.nix
