@@ -12,6 +12,7 @@
    jetbrains.jdk
    ollama-cuda	
    proxyman
+   scilab-bin
    ];
  
 }
