@@ -11,7 +11,6 @@
 	./developer.nix
 	./firefox.nix
 	./gnome.nix
-	./hardware-configuration.nix
 	./haxxor.nix
 	./microslop.nix
 	./nvidia.nix
