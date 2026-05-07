@@ -2,9 +2,10 @@
 
 {
  environment.systemPackages = with pkgs; [ 
-   krita
-   kdePackages.wacomtablet
+   aseprite
    blender
    inkscape
+   kdePackages.wacomtablet
+   krita
  ];
 }

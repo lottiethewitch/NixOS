@@ -33,6 +33,13 @@
         specialArgs = {inherit inputs;};
         # > Our main nixos configuration file <
         modules = with inputs; [
+          ./nixos/vader/vader.nix
+        ];
+      };
+
+      anakin = nixpkgs.lib.nixosSystem {
+	 specialArgs = {inherit inputs;};
+         modules = with inputs; [
           ./nixos/configuration.nix
         ];
       };
@@ -43,6 +50,16 @@
     homeConfigurations = {
       # FIXME replace with your username@hostname
       "lottie@vader" = home-manager.lib.homeManagerConfiguration {
+        # Home-manager requires 'pkgs' instance
+        pkgs = nixpkgs.legacyPackages.x86_64-linux; # FIXME replace x86_64-linux with your architecure 
+        extraSpecialArgs = {inherit inputs;};
+        # > Our main home-manager configuration file <
+        modules = [
+          ./home-manager/home.nix
+          ];
+      };
+
+     "lottie@anakin" = home-manager.lib.homeManagerConfiguration {
         # Home-manager requires 'pkgs' instance
         pkgs = nixpkgs.legacyPackages.x86_64-linux; # FIXME replace x86_64-linux with your architecure 
         extraSpecialArgs = {inherit inputs;};
