@@ -40,7 +40,7 @@
       anakin = nixpkgs.lib.nixosSystem {
 	 specialArgs = {inherit inputs;};
          modules = with inputs; [
-          ./nixos/configuration.nix
+          ./nixos/anakin/anakin.nix
         ];
       };
     };
