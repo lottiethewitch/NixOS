@@ -11,6 +11,7 @@
      ../modules/firefox.nix
      ../modules/gnome.nix
      ../modules/haxxor.nix
+     ../modules/zsh.nix
     ];
 
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
