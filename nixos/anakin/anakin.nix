@@ -109,6 +109,8 @@
     devenv
     direnv
     calibre
+    obsidian
+    terminator
   ];
 
   # Some programs need SUID wrappers, can be configured further or are
