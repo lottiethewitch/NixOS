@@ -5,6 +5,7 @@
 	yt-dlp
 	bitwig-studio
 	vital
+	musescore
 	];
 
 }
