@@ -84,6 +84,11 @@
         };
       };
 
+      gitgutter = {
+	enable = true;
+	recommendedSettings = true;
+      };
+
       harpoon.enable = true;
 
       bufferline.enable = true;
