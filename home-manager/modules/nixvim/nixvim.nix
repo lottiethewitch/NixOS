@@ -147,6 +147,10 @@
 
       marks.enable = true;
 
+      nvim-lint = {
+	enable = true;
+      };
+
       nvim-tree = {
         enable = true;
         autoLoad = true;
