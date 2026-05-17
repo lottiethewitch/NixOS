@@ -88,6 +88,11 @@
 
       bufferline.enable = true;
       lualine.enable = true;
+
+      lint = {
+	enable = true;
+	autoLoad = true;
+      };
       
       lsp = {
         inlayHints = true;
@@ -96,7 +101,6 @@
 
 	  tflint = {
             enable = true;
-	    preset = "recommended";
 	  };
 
           rust_analyzer = {
@@ -125,7 +129,9 @@
           lua_ls.enable = true;
 	  bashls.enable = true;
 	  jsonls.enable = true;
-          nixd.enable = true;
+          nixd = {
+	    enable = true;
+	  };
 	  postgres_lsp.enable = true;
 	  cssls.enable = true;
         };
