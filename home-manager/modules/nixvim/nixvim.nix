@@ -96,6 +96,7 @@
 
 	  tflint = {
             enable = true;
+	    preset = "recommended";
 	  };
 
           rust_analyzer = {
