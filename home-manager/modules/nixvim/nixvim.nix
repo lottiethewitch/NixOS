@@ -8,9 +8,6 @@
  home.shellAliases.v = "nvim";
 
   programs.nixvim = {
-    config.options = {
-	
-    };
 
     enable = true;
     defaultEditor = true;
