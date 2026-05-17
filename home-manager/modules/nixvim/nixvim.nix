@@ -97,9 +97,6 @@
       lint = {
 	enable = true;
 	autoLoad = true;
-        customLinters = [
-	   "nixd"
-	];
       };
       
       lsp = {
