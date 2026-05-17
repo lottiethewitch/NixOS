@@ -8,6 +8,10 @@
  home.shellAliases.v = "nvim";
 
   programs.nixvim = {
+    config.options = {
+	
+    };
+
     enable = true;
     defaultEditor = true;
 
@@ -92,6 +96,11 @@
         inlayHints = true;
         enable = true;
         servers = {
+
+	  tflint = {
+            enable = true;
+	  };
+
           rust_analyzer = {
             enable = true;
             installCargo = true;
