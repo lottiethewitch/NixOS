@@ -86,6 +86,7 @@
 
   # Define a user account. Don't forget to set a password with ‘passwd’.
   users.users.lottie = {
+    shell = pkgs.zsh;
     isNormalUser = true;
     description = "lottie";
     extraGroups = [ "networkmanager" "wheel" ];
@@ -107,6 +108,7 @@
   #  wget
     devenv
     direnv
+    calibre
   ];
 
   # Some programs need SUID wrappers, can be configured further or are
