@@ -9,6 +9,8 @@
 
   programs.nixvim = {
 
+  colorSchemes.catppuccin.enable = true;
+
     enable = true;
     defaultEditor = true;
 
@@ -28,7 +30,7 @@
       elixir-ls
       lua-language-server
     ];
-  
+
   plugins = {
    
    diffview.enable = true;
