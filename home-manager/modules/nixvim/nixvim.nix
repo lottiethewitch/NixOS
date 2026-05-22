@@ -9,7 +9,7 @@
 
   programs.nixvim = {
 
-  colorschemes.catppuccin.enable = true;
+  colorschemes.tokyonight.enable = true;
 
     enable = true;
     defaultEditor = true;
