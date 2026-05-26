@@ -9,5 +9,5 @@
 	];
 
 	## lol ok google
-        nixpkgs.androidsdk.accept_license = true;
+        nixpkgs.android_sdk.accept_license = true;
 }
