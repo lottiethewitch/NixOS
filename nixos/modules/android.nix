@@ -8,6 +8,4 @@
 		jdk25
 	];
 
-	## lol ok google
-        nixpkgs.android_sdk.accept_license = true;
 }
