@@ -8,4 +8,6 @@
 		jdk25
 	];
 
+	pkgs.androidsdk.accept_license = true;
+
 }
