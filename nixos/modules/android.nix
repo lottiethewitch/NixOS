@@ -8,6 +8,6 @@
 		jdk25
 	];
 
-	pkgs.androidsdk.accept_license = true;
-
+	## lol ok google
+        nixpkgs.androidsdk.accept_license = true;
 }
