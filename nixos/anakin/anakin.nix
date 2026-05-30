@@ -12,6 +12,7 @@
      ../modules/gnome.nix
      ../modules/haxxor.nix
      ../modules/zsh.nix
+     ../modules/android.nix
     ];
 
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
@@ -99,8 +100,11 @@
   programs.firefox.enable = true;
 
   # Allow unfree packages
-  nixpkgs.config.allowUnfree = true;
+  nixpkgs.config = {
 
+    allowUnfree = true;
+    android_sdk.accept_license = true;
+  };
   # List packages installed in system profile. To search, run:
   # $ nix search wget
   environment.systemPackages = with pkgs; [
