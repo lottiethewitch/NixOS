@@ -7,7 +7,8 @@
 
 {
  imports = [
- 	./art.nix
+ 	./android.nix
+	./art.nix
 	./developer.nix
 	./firefox.nix
 	./gnome.nix
