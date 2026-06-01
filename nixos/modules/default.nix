@@ -14,6 +14,7 @@
 	./gnome.nix
 	./haxxor.nix
 	./microslop.nix
+	./minecraft.nix
 	./music.nix
 	./postgres.nix
 	./virt.nix
