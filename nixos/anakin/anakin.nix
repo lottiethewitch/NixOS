@@ -12,7 +12,6 @@
      ../modules/gnome.nix
      ../modules/haxxor.nix
      ../modules/zsh.nix
-     ../modules/android.nix
     ];
 
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
