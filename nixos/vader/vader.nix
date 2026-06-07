@@ -44,7 +44,7 @@
   services.rpcbind.enable = true;
   
   fileSystems."/mnt" = {
-    device = "192.168.0.65:/srv/saddlebag";
+    device = "192.168.0.65:/home/lottie/mnt";
     fsType = "nfs";
   };
 
