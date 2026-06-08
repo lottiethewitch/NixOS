@@ -1,3 +1,4 @@
+#!/bin/bash
 ## Script for setting everything up after migrating to Arch Linux!
 
 sudo mkdir /mnt/home_backup
