@@ -1,6 +1,5 @@
 { config, pkgs, ... }:
 {
-  pkgs = import pkgs { config.allowUnfree = true;};
 
   imports = [
     ./modules
