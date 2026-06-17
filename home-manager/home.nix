@@ -13,14 +13,6 @@
 
   home.username = "lottie";
   home.homeDirectory = "/home/lottie";
-  
- 
-  programs.direnv = {
-    enable = true;
-    nix-direnv.enable = true;
-    enableZshIntegration = true;
-  };
-
 
   home.stateVersion = "25.11"; # Please read the comment before changing.
 
