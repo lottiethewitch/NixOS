@@ -1,6 +1,6 @@
 { config, pkgs, ... }:
 {
-  pkgs = import nixpkgs { inherit system; config.allowUnfree = true;};
+  pkgs = import pkgs { inherit system; config.allowUnfree = true;};
 
   imports = [
     ./modules
