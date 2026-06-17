@@ -1,6 +1,6 @@
 { config, pkgs, ... }:
 {
-  pkgs = import pkgs { inherit system; config.allowUnfree = true;};
+  pkgs = import pkgs { config.allowUnfree = true;};
 
   imports = [
     ./modules
