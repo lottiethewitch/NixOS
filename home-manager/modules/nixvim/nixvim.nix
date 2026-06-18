@@ -32,6 +32,10 @@
     ];
 
   plugins = {
+
+  comfy-line-numbers = {
+	enable = true;
+  };
    
    diffview.enable = true;
    gitsigns.enable = true;
