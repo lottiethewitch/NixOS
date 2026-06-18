@@ -17,7 +17,10 @@
     nixpkgs.useGlobalPackages = true;
     viAlias = true;
     vimAlias = true;
-
+     
+    extraConfigLua = ''
+	vim.opt.cursorline = true
+    '';
     luaLoader.enable = true;
     extraPackages = with pkgs; [
       ripgrep
