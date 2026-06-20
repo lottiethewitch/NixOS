@@ -47,8 +47,10 @@
   services.displayManager.sddm.enable = true;
   services.desktopManager.plasma6.enable = true;
 
-
-
+  
+  programs.zsh.enable = true;
+  
+ 
   fileSystems."/mnt" = {
     device = "192.168.0.65:/home/lottie/mnt";
     fsType = "nfs";
