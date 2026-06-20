@@ -167,7 +167,6 @@
   mtools
   nfs-utils
   yt-dlp
-  librewolf
   adwaita-icon-theme
   htop
   obsidian
