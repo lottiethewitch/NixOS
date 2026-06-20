@@ -15,6 +15,5 @@
 	./music.nix
 	./postgres.nix
 	./virt.nix
-	./zsh.nix
  ];
 }
