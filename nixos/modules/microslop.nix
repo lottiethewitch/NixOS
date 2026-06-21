@@ -2,8 +2,7 @@
 
 {
   environment.systemPackages = with pkgs; [
-    wineWow64Packages.staging
-    wineWowPackages.full
+    wineWow64Packages.full
     winetricks
     wine64
     bottles
