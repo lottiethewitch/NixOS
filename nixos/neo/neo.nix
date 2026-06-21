@@ -49,12 +49,6 @@
 
   
   programs.zsh.enable = true;
-  
- 
-  fileSystems."/mnt" = {
-    device = "192.168.0.65:/home/lottie/mnt";
-    fsType = "nfs";
-  };
 
   virtualisation = {
      libvirtd = {
