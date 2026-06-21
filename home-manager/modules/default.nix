@@ -7,8 +7,9 @@
 
 {
   imports = [
-    ./nixvim
     ./git.nix
     ./kitty.nix
+    ./nixvim
+    ./zsh.nix
   ];
 }
