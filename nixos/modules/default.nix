@@ -1,7 +1,4 @@
 {
-  pkgs,
-  lib, 
-  imports,
   ...
 }:
 
@@ -11,6 +8,7 @@
 	./developer.nix
 	./firefox.nix
         ./haxxor.nix
+	./microslop.nix
 	./minecraft.nix
 	./music.nix
 	./postgres.nix

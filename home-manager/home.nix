@@ -4,8 +4,6 @@
   imports = [
     ./modules
     ./modules/nixvim
-    ./hyprland.nix
-    ./emacs.nix
   ];
 
 
