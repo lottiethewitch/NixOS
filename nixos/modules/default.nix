@@ -9,7 +9,8 @@
  imports = [
 	./art.nix
 	./developer.nix
-	./haxxor.nix
+	./firefox.nix
+        ./haxxor.nix
 	./minecraft.nix
 	./music.nix
 	./postgres.nix
