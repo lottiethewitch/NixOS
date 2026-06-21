@@ -1,4 +1,4 @@
-{ fetchurl, stdenv }:
+{ stdenv, fetchurl }:
 
 stdenv.mkDerivation {
 	name = "xlm-core";
