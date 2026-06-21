@@ -14,5 +14,6 @@
 	./postgres.nix
 	./steam.nix
 	./virt.nix
+	./writing.nix
  ];
 }
