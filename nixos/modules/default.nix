@@ -12,6 +12,7 @@
 	./minecraft.nix
 	./music.nix
 	./postgres.nix
+	./steam.nix
 	./virt.nix
  ];
 }

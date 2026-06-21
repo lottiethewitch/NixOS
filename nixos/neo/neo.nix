@@ -138,12 +138,6 @@
 	android_sdk.accept_license = true;
   };   
 
-  # Install steam, discord
-  programs.steam = { 
-    enable = true;
-    localNetworkGameTransfers.openFirewall = true;    
-  };
-
   services.flatpak.enable = true;
 
   services.usbmuxd = {
