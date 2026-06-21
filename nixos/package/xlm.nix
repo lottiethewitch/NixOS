@@ -1,6 +1,6 @@
-{ stdenv, fetchurl }:
+{ lib, stdenv, fetchurl }:
 
-stdenv.mkDerivation {
+stdenv.mkDerivation rec {
 	name = "xlm-core";
 	src = fetchurl {
 		url = "https://github.com/Blooym/xlm/releases/latest/download/xlm-x86_64-unknown-linux-gnu";
