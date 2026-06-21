@@ -9,7 +9,6 @@
   imports = [
     ./nixvim
     ./git.nix
-    ./yubikey.nix
     ./kitty.nix
   ];
 }
