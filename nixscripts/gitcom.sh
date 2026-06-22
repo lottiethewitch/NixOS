@@ -6,6 +6,7 @@ MSG="Automated git commit message at $current_date"
 git add -A
 git commit -m "$MSG"
 
+
 # Options h or s please choose one
 while getopts "h:s:" opt; do
   case $opt in
