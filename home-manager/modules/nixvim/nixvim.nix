@@ -43,9 +43,9 @@
 
 
 	  extraConfigLua = ''
-	  		vim.opt.cursorline = true
+	  		   vim.opt.cursorline = true
 				vim.opt.shiftwidth = 8
-			  vim.opt.tabstop = 4        
+			    vim.opt.tabstop = 1        
 				vim.opt.softtabstop = 8
 				vim.opt.smarttab = 8
 	
