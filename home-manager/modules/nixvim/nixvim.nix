@@ -31,8 +31,14 @@
       lua-language-server
     ];
 
+          
+    extraConfigLua = ''
+	vim.opt.cursorline = true
+    '';
+
+
   plugins = {
-   
+
    diffview.enable = true;
    gitsigns.enable = true;
 
@@ -165,6 +171,7 @@
       treesitter = {
         enable = true;
         nixGrammars = true;
+	indent.enable = true;
         grammarPackages = with pkgs.vimPlugins.nvim-treesitter.builtGrammars; [
           ruby
           elixir
