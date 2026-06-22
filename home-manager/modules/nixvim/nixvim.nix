@@ -43,8 +43,9 @@
 
 
 	  extraConfigLua = ''
-						vim.opt.cursorline = true
-						'';
+	  			vim.opt.cursorline = true
+	
+			'';
 
 	  ### Lets be real this is what ur here for
 
