@@ -9,7 +9,6 @@
     ./hyprland.nix
     ./kitty.nix
     ./nixvim
-    ./yubikey.nix
     ./zsh.nix
   ];
 }
