@@ -10,12 +10,12 @@ function autogitter() {
 };
 
 function home() {
-		home-manager switch --flake .#lottie@"$CURRENT_STATE"
+		home-manager switch --flake .#lottie@neo
 };
 
 
 function system() {
-		sudo nixos-rebuild switch --flake .#"$CURRENT_STATE"
+		sudo nixos-rebuild switch --flake .#neo
 };
 
 
