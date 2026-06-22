@@ -1,224 +1,225 @@
 { config, pkgs, inputs, ... }:
 
-{
- imports = [
-   inputs.nixvim.homeModules.nixvim
- ];
+{	
 
- home.shellAliases.v = "nvim";
- 
- programs.nixvim = {
+	imports = [
+		inputs.nixvim.homeModules.nixvim
+	];
+
+	home.shellAliases.v = "nvim";
+
+	programs.nixvim = {
 
 		colorschemes = {
-						tokyonight.enable = true;
+			tokyonight.enable = true;
 		};
 
-		
 
-    enable = true;   ### morgan freeman
-    
+
+		enable = true;   ### morgan freeman
+
 
 		defaultEditor = true; ### Editor settings
-    nixpkgs.useGlobalPackages = true;
-    viAlias = true;
-    vimAlias = true;
+		nixpkgs.useGlobalPackages = true;
+		viAlias = true;
+		vimAlias = true;
 
-    luaLoader.enable = true;
-		
+		luaLoader.enable = true;
+
 		extraPackages = with pkgs; [
-						ripgrep
-						lazygit
-						fd
-						gcc
-						nodejs
-						tree-sitter
-						solargraph
-						elixir-ls
-            lua-language-server
-     ];
+			ripgrep
+			lazygit
+			fd
+			gcc
+			nodejs
+			tree-sitter
+			solargraph
+			elixir-ls
+			lua-language-server
+		];
 
 
 		### *guy who does not want to write lua voice*: Here's some lua
 
-          
+
 		extraConfigLua = ''
 						vim.opt.cursorline = true
-    '';
+						'';
 
 		### Lets be real this is what ur here for
 
 
 		plugins = {
 
-						autoLoad = true;
-						diffview.enable = true;
-						gitsigns.enable = true;
-						cmp = {
-								enable = true;
-								autoEnableSources = true;
+			autoLoad = true;
+			diffview.enable = true;
+			gitsigns.enable = true;
+			cmp = {
+				enable = true;
+				autoEnableSources = true;
 
-        
-				    settings.sources = [
-          
-										{ name = "nvim_lsp"; }
-										{ name = "path"; }
-										{ name = "buffer"; }
-						];
-						};
 
-						cmp-nvim-lsp.enable = true;
-						cmp-path.enable = true;
-						cmp-buffer.enable = true;
+				settings.sources = [
 
-						cmake-tools.enable = true;
+					{ name = "nvim_lsp"; }
+					{ name = "path"; }
+					{ name = "buffer"; }
+				];
+			};
 
-						colorizer.enable = true;
+			cmp-nvim-lsp.enable = true;
+			cmp-path.enable = true;
+			cmp-buffer.enable = true;
 
-						dap = {
-								enable = true;
-								autoLoad = true;
-						};
+			cmake-tools.enable = true;
 
-						dap-ui = {
-								enable = true;
-				        autoLoad = true;
-						};
+			colorizer.enable = true;
 
-						emmet = {
-								enable = true;
-								autoLoad = true;
-						};
-						
-						fzf-lua = {
-				        enable = true;
-								settings = {
-										winopts = {
-												height = 0.40;
-												width = 1.00;
-												row = 1.00;
-												col = 0.00;
-												border = "none";
-												fullscreen = false;
-										};
-										fzf_opts = {
-												"--layout" = "reverse-list";
-										};
-								};
-						};
+			dap = {
+				enable = true;
+				autoLoad = true;
+			};
 
-						gitgutter = {
-								enable = true;
-								recommendedSettings = true;
-						};
+			dap-ui = {
+				enable = true;
+				autoLoad = true;
+			};
 
-						harpoon.enable = true;
+			emmet = {
+				enable = true;
+				autoLoad = true;
+			};
 
-						bufferline.enable = true;
-						lualine.enable = true;
-
-						indent-blankline.enable = true;
-
-				    lint = {
-								enable = true;
-								autoLoad = true;
-						};
-
-						lsp = {
-								inlayHints = true;
-				        enable = true;
-								servers = {
-
-										tflint = {
-												enable = true;
-										};
-
-										rust_analyzer = {
-												enable = true;
-												installCargo = true;
-												installRustc = true;        
-										};  
-										elixirls.enable = true;
-										solargraph = {
-												enable = true;
-												cmd = [ "solargraph" ];
-												filetypes = [ "ruby" "eruby" ];
-												rootMarkers = [
-														"Gemfile"
-														"Rakefile"
-												];
-										};
-										emmet_language_server.enable = true;
-										csharp_ls.enable = true;
-										java_language_server.enable = true;
-										html.enable = true;
-										kotlin_language_server.enable = true;
-										ts_ls.enable = true;
-										eslint.enable = true;
-										nil_ls.enable = true;
-										lua_ls.enable = true;
-										bashls.enable = true;
-										jsonls.enable = true;
-										nixd = {
-												enable = true;
-										};
-										postgres_lsp.enable = true;
-										cssls.enable = true;
-								};
-						};
-
-						luasnip = {
-								enable = true;
-								autoLoad = true;
-						};
-
-						marks.enable = true;
-
-						nvim-tree = {
-								enable = true;
-								autoLoad = true;
-								openOnSetup = true;
-						};
-
-						rainbow = {
-								enable = true;
-								autoLoad = true;
-						};
-
-						treesitter = {
-								enable = true;
-								nixGrammars = true;
-								indent.enable = true;
-								grammarPackages = with pkgs.vimPlugins.nvim-treesitter.builtGrammars; [
-										ruby
-										elixir
-										heex
-										eex
-										html
-										css
-										javascript
-										typescript
-										json
-										yaml
-										markdown
-										markdown_inline
-										lua
-										vim
-										vimdoc
-										bash
-										sql
-										dockerfile
-										gitignore
-										regex
-										toml
-										xml
-										nix
-								];
-						};
-						telescope.enable = true;
-						web-devicons = {
-								enable = true;
-								autoLoad = true;
-						};
+			fzf-lua = {
+				enable = true;
+				settings = {
+					winopts = {
+						height = 0.40;
+						width = 1.00;
+						row = 1.00;
+						col = 0.00;
+						border = "none";
+						fullscreen = false;
+					};
+					fzf_opts = {
+						"--layout" = "reverse-list";
+					};
 				};
+			};
+
+			gitgutter = {
+				enable = true;
+				recommendedSettings = true;
+			};
+
+			harpoon.enable = true;
+
+			bufferline.enable = true;
+			lualine.enable = true;
+
+			indent-blankline.enable = true;
+
+			lint = {
+				enable = true;
+				autoLoad = true;
+			};
+
+			lsp = {
+				inlayHints = true;
+				enable = true;
+				servers = {
+
+					tflint = {
+						enable = true;
+					};
+
+					rust_analyzer = {
+						enable = true;
+						installCargo = true;
+						installRustc = true;        
+					};  
+					elixirls.enable = true;
+					solargraph = {
+						enable = true;
+						cmd = [ "solargraph" ];
+						filetypes = [ "ruby" "eruby" ];
+						rootMarkers = [
+							"Gemfile"
+							"Rakefile"
+						];
+					};
+					emmet_language_server.enable = true;
+					csharp_ls.enable = true;
+					java_language_server.enable = true;
+					html.enable = true;
+					kotlin_language_server.enable = true;
+					ts_ls.enable = true;
+					eslint.enable = true;
+					nil_ls.enable = true;
+					lua_ls.enable = true;
+					bashls.enable = true;
+					jsonls.enable = true;
+					nixd = {
+						enable = true;
+					};
+					postgres_lsp.enable = true;
+					cssls.enable = true;
+				};
+			};
+
+			luasnip = {
+				enable = true;
+				autoLoad = true;
+			};
+
+			marks.enable = true;
+
+			nvim-tree = {
+				enable = true;
+				autoLoad = true;
+				openOnSetup = true;
+			};
+
+			rainbow = {
+				enable = true;
+				autoLoad = true;
+			};
+
+			treesitter = {
+				enable = true;
+				nixGrammars = true;
+				indent.enable = true;
+				grammarPackages = with pkgs.vimPlugins.nvim-treesitter.builtGrammars; [
+					ruby
+					elixir
+					heex
+					eex
+					html
+					css
+					javascript
+					typescript
+					json
+					yaml
+					markdown
+					markdown_inline
+					lua
+					vim
+					vimdoc
+					bash
+					sql
+					dockerfile
+					gitignore
+					regex
+					toml
+					xml
+					nix
+				];
+			};
+			telescope.enable = true;
+			web-devicons = {
+				enable = true;
+				autoLoad = true;
+			};
 		};
+	};
 }
