@@ -2,18 +2,36 @@
 #! nix-shell -i bash -p bash
 current_date=$(date +%d-%m-%Y" "%H:%M:%S);
 MSG="Automated git commit message at $current_date"
+CURRENT_STATE=$(hostname);
 
-git add -A
-git commit -m "$MSG"
+function autogitter() {
+		git add -A
+		git commit -m "$MSG"
+};
+
+function home() {
+		home-manager switch --flake .#lottie@"$CURRENT_STATE"
+};
 
 
-# Options h or s please choose one
-while getopts "h:s:" opt; do
-  case $opt in
-	h) home-manager switch --flake .#lottie@vader --show-trace ;;
-	s) sudo nixos-rebuild switch --flake .#vader ;;
-	\?) echo "Invalid option: -$OPTARG" ;;
-  esac
-done
+function system() {
+		sudo nixos-rebuild switch --flake .#"$CURRENT_STATE"
+};
+
+
+function main_func() {
+		autogitter
+		# Options h or s please choose one
+		while getopts "h:s:" opt; do
+				case $opt in
+						h) home	;; 
+
+						s) system  ;;
+						\?) autogitter ;;
+ 			esac
+		done
+};
+
+main_func
 
 
