@@ -173,7 +173,7 @@
 		xclip
 		qbittorrent
 		htop
-
+		jellyfin-desktop
 	];
 
 	# List services that you want to enable:
