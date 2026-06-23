@@ -43,6 +43,14 @@
           ./nixos/anakin/anakin.nix
         ];
       };
+ 
+	  mettaton = nixpkgs.lib.nixosSystem {
+		  specialArgs = {inherit inputs;};
+         modules = with inputs; [
+          ./nixos/mettaton/mettaton.nix
+        ];
+      };
+
 
       neo = nixpkgs.lib.nixosSystem {
         specialArgs = {inherit inputs;};
