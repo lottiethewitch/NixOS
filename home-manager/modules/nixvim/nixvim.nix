@@ -48,7 +48,6 @@
 					 vim.opt.tabstop = 4        
 					 vim.opt.softtabstop = 1
 					 vim.opt.smarttab = true
-
 					 '';
 
 	### Lets be real this is what ur here for
@@ -78,6 +77,10 @@
 	  cmake-tools.enable = true;
 
 	  colorizer.enable = true;
+
+	  comfy-line-numbers = {
+		enable = true;
+	  };
 
 	  dap = {
 		enable = true;
