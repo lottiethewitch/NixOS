@@ -3,14 +3,7 @@
   environment.systemPackages = with pkgs; [
    devenv
    direnv
-   vscode-fhs
-   jetbrains.rust-rover
-   jetbrains.clion
-   jetbrains.idea
-   jetbrains.rider
    kotlin
-   jetbrains.jdk
-   ollama-cuda	
    proxyman
    scilab-bin
    ];

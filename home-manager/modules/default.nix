@@ -1,15 +1,14 @@
 {
-  pkgs,
-  lib,
-  imports,
   ...
 }:
 
 {
   imports = [
-    ./nixvim
+    ./emacs.nix
     ./git.nix
-    ./yubikey.nix
+    ./hyprland.nix
     ./kitty.nix
+    ./nixvim
+    ./zsh.nix
   ];
 }
