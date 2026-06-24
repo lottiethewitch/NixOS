@@ -108,13 +108,13 @@
     ];
   };
 
-  # Install firefox.
-  programs.firefox.enable = true;
-
   # Allow unfree packages
   nixpkgs.config.allowUnfree = true;
-  
 
+  programs.zsh.enable = true;
+  
+  
+  https://stackoverflow.com/questions/14171849/compiling-common-lisp-to-an-executable
   programs.git = {
     enable = true;
     config.user = {
@@ -127,6 +127,8 @@
   environment.systemPackages = with pkgs; [
   #  vim # Do not forget to add an editor to edit configuration.nix! The Nano editor is also installed by default.
   #  wget
+	firefox-bin
+	obsidian
   ];
 
   # Some programs need SUID wrappers, can be configured further or are
