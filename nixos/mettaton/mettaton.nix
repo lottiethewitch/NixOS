@@ -114,7 +114,6 @@
   programs.zsh.enable = true;
   
   
-  https://stackoverflow.com/questions/14171849/compiling-common-lisp-to-an-executable
   programs.git = {
     enable = true;
     config.user = {
