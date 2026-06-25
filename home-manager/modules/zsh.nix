@@ -3,10 +3,6 @@
   programs.zsh = {
     enable = true;
 
-	home.sessionPath = [
-	  "$HOME/bin"
-	];
-
     shellAliases = {
       ll = "ls -l";
       edit = "sudo -e";
