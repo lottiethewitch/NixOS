@@ -4,10 +4,11 @@
 
 {
  imports = [
+	./android.nix
 	./art.nix
 	./developer.nix
 	./firefox.nix
-        ./haxxor.nix
+    ./haxxor.nix
 	./microslop.nix
 	./minecraft.nix
 	./music.nix
