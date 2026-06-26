@@ -100,8 +100,6 @@
 		LC_TIME = "en_US.UTF-8";
 	};
 
-	xdg-desktop-portal.enable = true;
-	xdg-desktop-portal-wlr.enable  = true;
 
 	# Wacom tablets
 	hardware.opentabletdriver.enable = true;
@@ -178,7 +176,16 @@
 		htop
 		jellyfin-desktop
 		obs-studio  
-	];
+		xdg-desktop-portal
+		xdg-desktop-portal-wlr
+		xdg-desktop-portal-gtk 
+    ];
+
+  xdg.portal = {
+	enable = true;
+	wlr.enable = true;
+	extraPortals = [ pkgs.xdg-desktop-portal-gtk ];
+  };
 
 	# List services that you want to enable:
 
