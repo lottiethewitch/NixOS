@@ -174,6 +174,7 @@
 		qbittorrent
 		htop
 		jellyfin-desktop
+		obs-studio  
 	];
 
 	# List services that you want to enable:
