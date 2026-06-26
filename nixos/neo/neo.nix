@@ -100,6 +100,9 @@
 		LC_TIME = "en_US.UTF-8";
 	};
 
+	xdg-desktop-portal.enable = true;
+	xdg-desktop-portal-wlr.enable  = true;
+
 	# Wacom tablets
 	hardware.opentabletdriver.enable = true;
 	hardware.uinput.enable = true;
