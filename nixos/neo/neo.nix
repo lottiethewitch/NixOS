@@ -163,6 +163,7 @@
 		git
 		rockbox-utility
 		kdePackages.partitionmanager
+		kdePackages.xdg-desktop-portal-kde
 		mtools
 		nfs-utils
 		yt-dlp
