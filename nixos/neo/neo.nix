@@ -177,7 +177,6 @@
 		htop
 		jellyfin-desktop
 		obs-studio  
-		xdg-desktop-portal-kde 
      ];
 
   xdg = {
