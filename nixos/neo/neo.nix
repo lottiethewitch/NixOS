@@ -135,6 +135,18 @@
 		};
     };
 
+	programs.obs-studio = {
+	  enable = true;
+	  plugins = with pkgs.obs-studio-plugins; [
+		  wlrobs
+		  obs-backgroundremoval
+		  obs-pipewire-audio-capture
+		  obs-gstreamer
+		  obs-vkcapture
+	  ];
+	};
+
+
 	# Define a user account. Don't forget to set a password with ‘passwd’.
 	users.users.lottie = {
 		shell = pkgs.zsh;
@@ -184,7 +196,6 @@
 		qbittorrent
 		htop
 		jellyfin-desktop
-		obs-studio  
 		xdg-desktop-portal-gtk
 	];
 
