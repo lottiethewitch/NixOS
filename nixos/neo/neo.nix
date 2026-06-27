@@ -177,7 +177,7 @@
 		htop
 		jellyfin-desktop
 		obs-studio  
-		kdePackages.xdg-desktop-portal-gtk
+		xdg-desktop-portal-gtk
 	];
 
   xdg = {
