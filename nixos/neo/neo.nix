@@ -144,8 +144,6 @@
 		localNetworkGameTransfers.openFirewall = true;    
 	};
 
-
-
 	services.flatpak.enable = true;
 
 	services.usbmuxd = {
@@ -182,10 +180,22 @@
 		xdg-desktop-portal-gtk 
      ];
 
-  xdg.portal = {
-	enable = true;
-	wlr.enable = true;
-	extraPortals = [ pkgs.xdg-desktop-portal-gtk ];
+  xdg = {
+	portal = {
+      enable = true;
+      wlr = {
+        enable = true;
+        settings = {
+          screencast = {
+            chooser_type = "simple";
+            chooser_cmd = "${pkgs.slurp}/bin/slurp -f 'Monitor: %o' -or";
+          };
+        };
+      };
+      extraPortals = [
+        pkgs.xdg-desktop-portal-gtk
+      ];
+    };
   };
 
 	# List services that you want to enable:
