@@ -121,11 +121,19 @@
 	services.pulseaudio.enable = false;
 	security.rtkit.enable = true;
 	services.pipewire = {
-		enable = true;
+	    enable = true;
 		alsa.enable = true;
 		alsa.support32Bit = true;
 		pulse.enable = true;
-	};
+		wireplumber = {
+		  enable = true;
+		  extraConfig = {
+			"10-default-volume" = {
+			"wireplumber.settings"."device.routes.default-sink-volume" = 0.8; # default is 0.4
+			};
+		  };
+		};
+    };
 
 	# Define a user account. Don't forget to set a password with ‘passwd’.
 	users.users.lottie = {
