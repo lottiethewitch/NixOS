@@ -9,6 +9,9 @@
 	kdePackages.xdg-desktop-portal-kde
 	xdg-desktop-portal-gtk
 	sway
+	papirus-icon-theme
+	kde-rounded-corners
+	nordic
   ];
 
   xdg = {
