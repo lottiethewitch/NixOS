@@ -29,7 +29,7 @@
 	enable = true;
 	autoThemeFiles = {
 	  dark = "TokyoNight";
-	  light = "GitHub";
+	  light = "TokyoNight";
 	  noPreference = "TokyoNight";
 	};
 
