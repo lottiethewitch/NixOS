@@ -199,6 +199,7 @@
 		jellyfin-desktop
 		xdg-desktop-portal-gtk
 		tmux
+		kitty-themes
 	];
 
   xdg = {
