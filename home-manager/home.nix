@@ -24,6 +24,18 @@
 	"$HOME/bin"
   ];
 
+
+  programs.kitty = {
+	enable = true;
+	gitIntegration = true;
+	autoThemeFiles = {
+	  dark = "TokyoNight";
+	  light = "GitHub";
+	  noPreference = "TokyoNight";
+	};
+
+  };
+
   home.stateVersion = "25.11"; # Please read the comment before changing.
 
   # Home Manager is pretty good at managing dotfiles. The primary way to manage
