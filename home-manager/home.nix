@@ -27,7 +27,6 @@
 
   programs.kitty = {
 	enable = true;
-	gitIntegration = true;
 	autoThemeFiles = {
 	  dark = "TokyoNight";
 	  light = "GitHub";
