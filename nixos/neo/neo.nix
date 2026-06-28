@@ -198,6 +198,7 @@
 		htop
 		jellyfin-desktop
 		xdg-desktop-portal-gtk
+		tmux
 	];
 
   xdg = {
