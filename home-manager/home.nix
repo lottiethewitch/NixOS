@@ -27,12 +27,6 @@
 
   programs.kitty = {
 	enable = true;
-	autoThemeFiles = {
-	  dark = "TokyoNight";
-	  light = "TokyoNight";
-	  noPreference = "TokyoNight";
-	};
-
   };
 
   home.stateVersion = "25.11"; # Please read the comment before changing.
