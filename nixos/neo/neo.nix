@@ -47,9 +47,7 @@
 
 	programs.zsh.enable = true;
 
-	fonts.packages = with pkgs; [
-	  nerd-fonts 
-    ];
+	fonts.packages = builtins.filter lib.attrsets.isDerivation (builtins.attrValues pkgs.nerd-fonts);
 	
 	virtualisation = {
 		libvirtd = {
