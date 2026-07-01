@@ -1,4 +1,4 @@
-{ config, pkgs, inputs, ... }:
+{ pkgs, inputs, ... }:
 
 {	
 
@@ -14,10 +14,7 @@
 	  tokyonight.enable = true;
 	};
 
-
-
 	enable = true;   ### morgan freeman
-
 
 	defaultEditor = true; ### Editor settings
 	nixpkgs.useGlobalPackages = true;
@@ -26,6 +23,7 @@
 
 	luaLoader.enable = true;
 
+	# This may not even be necessary but im lazy and dont wanna fix it
 	extraPackages = with pkgs; [
 	  ripgrep
 	  lazygit
@@ -38,9 +36,7 @@
 	  lua-language-server
 	];
 
-
 	### *guy who does not want to write lua voice*: Here's some lua
-
 
 	extraConfigLua = ''
 					 vim.opt.cursorline = true
@@ -55,8 +51,8 @@
 
 	plugins = {
 
-	  diffview.enable = true;
-	  gitsigns.enable = true;
+	  bufferline.enable = true;
+	 
 	  cmp = {
 		enable = true;
 		autoEnableSources = true;
@@ -91,7 +87,9 @@
 		enable = true;
 		autoLoad = true;
 	  };
-
+	 
+	  diffview.enable = true;
+	  
 	  emmet = {
 		enable = true;
 		autoLoad = true;
@@ -119,9 +117,10 @@
 		recommendedSettings = true;
 	  };
 
+	  gitsigns.enable = true;
+	
 	  harpoon.enable = true;
 
-	  bufferline.enable = true;
 	  lualine.enable = true;
 
 	  indent-blankline.enable = true;
@@ -196,6 +195,11 @@
 		autoLoad = true;
 	  };
 
+	  render-markdown = {
+		enable = true;
+		autoLoad = true;
+	  };
+	  
 	  treesitter = {
 		enable = true;
 		nixGrammars = true;
@@ -227,7 +231,9 @@
 		  python
 		];
 	  };
+
 	  telescope.enable = true;
+	  
 	  web-devicons = {
 		enable = true;
 		autoLoad = true;
