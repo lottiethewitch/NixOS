@@ -136,6 +136,10 @@
 		enable = true;
 		servers = {
 
+		  jedi_language_server = {
+			enable = true;
+		  };
+
 		  tflint = {
 			enable = true;
 		  };
@@ -220,6 +224,7 @@
 		  toml
 		  xml
 		  nix
+		  python
 		];
 	  };
 	  telescope.enable = true;
