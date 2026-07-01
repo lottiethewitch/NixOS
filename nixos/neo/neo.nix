@@ -45,11 +45,6 @@
 	# Virtualization
 	services.rpcbind.enable = true;
 
-	# Enable the KDE Plasma Desktop Environment.
-	services.displayManager.sddm.enable = true;
-	services.desktopManager.plasma6.enable = true;
-
-
 	programs.zsh.enable = true;
 
 	virtualisation = {
@@ -184,7 +179,6 @@
 		git
 		rockbox-utility
 		kdePackages.partitionmanager
-		kdePackages.xdg-desktop-portal-kde
 		mtools
 		nfs-utils
 		yt-dlp
@@ -197,31 +191,9 @@
 		qbittorrent
 		htop
 		jellyfin-desktop
-		xdg-desktop-portal-gtk
 		tmux
 		kitty-themes
 	];
-
-  xdg = {
-	portal = {
-      enable = true;
-      wlr = {
-        enable = true;
-        settings = {
-          screencast = {
-            chooser_type = "simple";
-            chooser_cmd = "${pkgs.slurp}/bin/slurp -f 'Monitor: %o' -or";
-          };
-        };
-      };
-	  config = {
-		common.default = [ "kde" ];
-	  };
-      extraPortals = [
-        pkgs.xdg-desktop-portal-gtk
-      ];
-    };
-  };
 
 	# List services that you want to enable:
 
