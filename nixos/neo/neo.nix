@@ -47,6 +47,10 @@
 
 	programs.zsh.enable = true;
 
+	fonts.packages = with pkgs; [
+	  nerd-fonts 
+    ];
+	
 	virtualisation = {
 		libvirtd = {
 			enable = true;
