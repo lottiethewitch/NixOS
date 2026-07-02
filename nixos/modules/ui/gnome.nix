@@ -13,6 +13,10 @@
 	xdg-desktop-portal-gnome
 	xdg-desktop-portal-gtk
 	gnomeExtensions.dash-to-panel
+	gnomeExtensions.user-themes
+	gnomeExtensions.open-bar
+	gnomeExtensions.just-perfection
+	gnomeExtensions.lockscreen-extension
 	gnome-extension-manager
 	adwaita-icon-theme
   ];
