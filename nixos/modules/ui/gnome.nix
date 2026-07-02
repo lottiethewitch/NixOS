@@ -30,11 +30,11 @@
 		};
 	  };
 	  config = {
-		common.default = [ "kde" ];
+		common.default = [ "gnome" ];
 	  };
 	  extraPortals = [
 		pkgs.xdg-desktop-portal-gtk
-		pkgs.kdePackages.xdg-desktop-portal-kde
+		pkgs.kdePackages.xdg-desktop-portal-gnome
 	  ];
 	};
   };
