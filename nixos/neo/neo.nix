@@ -7,7 +7,6 @@
 	imports =
 		[ # Include the results of the hardware scan.
 			../modules
-			../modules/ui/plasma.nix
 			../modules/ui/gnome.nix
 	        ../modules/nvidia/nvidia.nix
 			./hardware-configuration.nix
