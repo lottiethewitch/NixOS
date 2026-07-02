@@ -14,6 +14,7 @@
 	xdg-desktop-portal-gtk
 	gnomeExtensions.dash-to-panel
 	gnome-extension-manager
+	adwaita-icon-theme
   ];
 
   xdg = {
