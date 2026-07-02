@@ -19,6 +19,8 @@
 	gnomeExtensions.lockscreen-extension
 	gnome-extension-manager
 	adwaita-icon-theme
+	graphite-gtk-theme
+	graphite-cursors
   ];
 
   xdg = {
