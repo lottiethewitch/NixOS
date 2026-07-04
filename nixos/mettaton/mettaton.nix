@@ -20,7 +20,7 @@
   boot.kernelPackages = pkgs.linuxPackages_latest;
 
 
-  nix.settings.experimental-features  [ "nix-command" "flakes" ];
+  nix.settings.experimental-features = [ "nix-command" "flakes" ];
 
   networking.hostName = "mettaton"; # Define your hostname.
   # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
@@ -120,6 +120,7 @@
   #  wget
 	firefox-bin
 	obsidian
+	calibre
   ];
 
   # Some programs need SUID wrappers, can be configured further or are
