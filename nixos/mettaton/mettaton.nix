@@ -20,20 +20,7 @@
   boot.kernelPackages = pkgs.linuxPackages_latest;
 
 
-  nix = let
-	flakeInputs = lib.filterAttrs (_: lib.isType "flake") inputs;
-  in {
-	settings = {
-	  experimental-features = ["nix-command" "flakes"];
-	  flake-registry = "";
-	  nix-path = config.nix.nixPath;
-	};
-	channel.enable = true;
-
-	registry = lib.mapAttrs(_: flake: {inherit flake;}) flakeInputs;
-	nixPath = lib.mapAttrsToList (n: _: "${n}=flake:${n}") flakeInputs;
-
-	};
+  nix.settings.experimental-features  [ "nix-command" "flakes" ];
 
   networking.hostName = "mettaton"; # Define your hostname.
   # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
