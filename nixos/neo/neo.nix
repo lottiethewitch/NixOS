@@ -194,7 +194,6 @@
 	xclip
 	qbittorrent
 	htop
-	jellyfin-desktop
 	tmux
 	kitty-themes
   ];
