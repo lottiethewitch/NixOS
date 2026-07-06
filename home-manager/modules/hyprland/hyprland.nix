@@ -8,6 +8,10 @@
 	configType = "lua";
 
 	enable = true;
+
+	settings = [
+
+	];
     
 	plugins = [
 
