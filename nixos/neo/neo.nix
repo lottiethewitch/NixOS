@@ -9,7 +9,7 @@
 	[ # Include the results of the hardware scan.
 	  ../modules
 	  ../modules/ui/gnome.nix
-	  ../modules/ui/hyprland
+	  ../modules/hyprland
 	  ../modules/nvidia/nvidia.nix
 	  ./hardware-configuration.nix
 	];
