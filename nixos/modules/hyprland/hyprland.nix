@@ -6,11 +6,6 @@
 	hyprland = {
 	  enable = true;
 
-	  plugins = [
-
-
-	  ];
-
 	  settings = {
 
 
