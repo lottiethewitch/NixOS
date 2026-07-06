@@ -20,24 +20,7 @@
 	];
   };
 
-  wayland.windowManager.hyprland = {
-	enable = true;
-
-	plugins = [
-	  # If using flake version - note this is not necessary and could be messy
-	  # inputs.hyprland-plugins.packages.${pkgs.stdenv.hostPlatform.system}.<plugin>
-	  
-	  # Preferred - follows nix pkgs
-	  # pkgs.hyprlandPlugins.<plugin>
-	];
-  };
-
-  environment.systemPackages = with pkgs; [
-	egl-wayland
-	kitty
-  ];
-
-  xdg = {
+ xdg = {
 	portal = {
 	  enable = true;
 	  # wlr = {
