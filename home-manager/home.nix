@@ -34,7 +34,7 @@
   # Home Manager is pretty good at managing dotfiles. The primary way to manage
   # plain files is through 'home.file'.
   home.file = {
-
+	".config/hypr/hyprland.lua".force = true;
 	#	".config/hypr" = {
 	#	  source = config.lib.file.mkOutOfStoreSymlink "/home/lottie/.config/hypr";
 	#	};
