@@ -70,6 +70,12 @@
     # EDITOR = "emacs";
   };
 
+  xdg.configFile."hypr" = {
+	source = config.lib.mkOutOfStoreSymlink "${dotfiles}/hypr";
+	force = true;
+	recursive = true;
+  };
+
   systemd.user.startServices = "sd-switch";
 
   # Let Home Manager install and manage itself.
