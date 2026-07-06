@@ -9,9 +9,6 @@
 
 	enable = true;
 
-	extraConfig = ''
-	  ./hyprland.lua	
-	'';
 	settings = {
 	  #	  "$mod" = "SUPER";
 	  #	  bind = [
