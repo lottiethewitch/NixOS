@@ -35,10 +35,11 @@
   # plain files is through 'home.file'.
   home.file = {
 
-	".config/hypr" = {
-	  source = config.lib.file.mkOutOfStoreSymlink "/home/lottie/.config/hypr";
-	};
-    # # Building this configuration will create a copy of 'dotfiles/screenrc' in
+	#	".config/hypr" = {
+	#	  source = config.lib.file.mkOutOfStoreSymlink "/home/lottie/.config/hypr";
+	#	};
+   
+	# # Building this configuration will create a copy of 'dotfiles/screenrc' in
     # # the Nix store. Activating the configuration will then make '~/.screenrc' a
     # # symlink to the Nix store copy.
     # ".screenrc".source = dotfiles/screenrc;
