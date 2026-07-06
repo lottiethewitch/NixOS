@@ -8,7 +8,11 @@
 	configType = "lua";
 
 	enable = true;
+    
+	extraConfig = ''
+	  ~/.config/hypr/hyprland.lua
 
+	'';
 	settings = {
 	  #	  "$mod" = "SUPER";
 	  #	  bind = [
