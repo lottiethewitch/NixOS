@@ -43,6 +43,10 @@
 	];
   };
 
+  environment.systemPackages = with pkgs; [
+	egl-wayland
+  ];
+
   xdg = {
 	portal = {
 	  enable = true;
