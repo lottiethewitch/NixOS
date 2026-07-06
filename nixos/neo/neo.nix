@@ -9,7 +9,7 @@
 	[ # Include the results of the hardware scan.
 	  ../modules
 	  ../modules/ui/niri.nix
-	  ../modules/ui/gnome.nix
+	  ../modules/ui/plasma.nix
 	  ../modules/nvidia/nvidia.nix
 	  ./hardware-configuration.nix
 	];
