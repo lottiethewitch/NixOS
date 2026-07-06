@@ -5,6 +5,7 @@
 
 	hyprland = {
 	  enable = true;
+	  xwayland.enable = true;
 	};
 
 	dconf.profiles.user.databases = [
