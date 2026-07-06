@@ -5,13 +5,6 @@
 
 	hyprland = {
 	  enable = true;
-
-	  settings = {
-
-
-	  };
-
-
 	};
 
 	dconf.profiles.user.databases = [
