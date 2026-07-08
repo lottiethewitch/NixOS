@@ -27,6 +27,12 @@
     ];
       theme = "agnoster";
     };
+
+	envExtra = ''
+	  export PATH=$PATH:/$HOME/bin:/$HOME/.config/emacs/bin
+
+	  '';
+
   };
   
   programs.direnv = {

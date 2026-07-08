@@ -6,7 +6,7 @@
   imports = [
     ./emacs.nix
     ./git.nix
-    ./kitty.nix
+	./hyprland
     ./nixvim
     ./zsh.nix
   ];
