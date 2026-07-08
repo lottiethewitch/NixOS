@@ -13,6 +13,7 @@
 	./minecraft.nix
 	./music.nix
 	./notes.nix
+	./onepass.nix
 	./postgres.nix
 	./steam.nix
 	./virt.nix
