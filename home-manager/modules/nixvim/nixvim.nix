@@ -187,7 +187,9 @@
 	  nvim-tree = {
 		enable = true;
 		autoLoad = true;
+		autoClose = false;
 		openOnSetup = true;
+		openOnSetupFile = true; # I like seeing my file tree 
 	  };
 
 	  rainbow = {
