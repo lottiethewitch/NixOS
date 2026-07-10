@@ -200,6 +200,10 @@
 		autoLoad = true;
 	  };
 	  
+	  spring-boot = {
+		enable = true;
+		autoLoad = true; # I get that this makes load times longer but im lazy
+	  };
 	  treesitter = {
 		enable = true;
 		nixGrammars = true;
@@ -211,6 +215,7 @@
 		  eex
 		  html
 		  css
+		  java
 		  javascript
 		  typescript
 		  json
