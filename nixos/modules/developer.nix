@@ -6,7 +6,7 @@
 	kotlin
 	proxyman
 	scilab-bin
-	vscode
+	vscodium
   ];
 
 }
