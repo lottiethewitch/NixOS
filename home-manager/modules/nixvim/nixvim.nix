@@ -166,8 +166,7 @@
 			  "Rakefile"
 			];
 		  };
-		  emme
-		  t_language_server.enable = true;
+		  emmet_language_server.enable = true;
 		  csharp_ls.enable = true;
 		  java_language_server.enable = true;
 		  html.enable = true;
