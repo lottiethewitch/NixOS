@@ -121,6 +121,10 @@
 	
 	  harpoon.enable = true;
 
+	  jdtls = {
+		enable = true;
+	  };
+
 	  lualine.enable = true;
 
 	  indent-blankline.enable = true;
@@ -148,7 +152,8 @@
 			installCargo = true;
 			installRustc = true;        
 		  };  
-		  elixirls.enable = true;
+		  elix
+		  irls.enable = true;
 		  solargraph = {
 			enable = true;
 			cmd = [ "solargraph" ];
@@ -175,6 +180,10 @@
 		  postgres_lsp.enable = true;
 		  cssls.enable = true;
 		};
+	  };
+
+	  lspkind = {
+		enable = true;
 	  };
 
 	  luasnip = {
