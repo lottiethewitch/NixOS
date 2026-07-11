@@ -121,7 +121,7 @@
 	
 	  harpoon.enable = true;
 
-	  jdtls = {
+	  java = {
 		enable = true;
 	  };
 
