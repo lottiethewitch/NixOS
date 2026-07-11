@@ -152,8 +152,7 @@
 			installCargo = true;
 			installRustc = true;        
 		  };  
-		  elix
-		  irls.enable = true;
+		  elixirls.enable = true;
 		  solargraph = {
 			enable = true;
 			cmd = [ "solargraph" ];
