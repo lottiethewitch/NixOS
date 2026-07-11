@@ -121,6 +121,14 @@
 	
 	  harpoon.enable = true;
 
+	  java = {
+		enable = true;
+	  };
+
+	  jdtls = {
+		enable = true;
+	  };
+
 	  lualine.enable = true;
 
 	  indent-blankline.enable = true;
@@ -158,7 +166,8 @@
 			  "Rakefile"
 			];
 		  };
-		  emmet_language_server.enable = true;
+		  emme
+		  t_language_server.enable = true;
 		  csharp_ls.enable = true;
 		  java_language_server.enable = true;
 		  html.enable = true;
