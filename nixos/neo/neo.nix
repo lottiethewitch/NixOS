@@ -196,6 +196,7 @@
 	htop
 	tmux
 	kitty-themes
+	jetbrains.idea
   ];
 
   # List services that you want to enable:
