@@ -178,6 +178,7 @@
 		  };
 		  postgres_lsp.enable = true;
 		  cssls.enable = true;
+		  jdtls.enable = true;
 		};
 	  };
 
