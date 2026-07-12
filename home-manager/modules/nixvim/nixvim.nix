@@ -121,10 +121,6 @@
 	
 	  harpoon.enable = true;
 
-	  java = {
-		enable = true;
-	  };
-
 	  lualine.enable = true;
 
 	  indent-blankline.enable = true;
