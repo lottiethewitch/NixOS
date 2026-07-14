@@ -8,6 +8,7 @@
 	scilab-bin
 	vscodium-fhs
 	helix
+    hugo
   ];
 
 }
