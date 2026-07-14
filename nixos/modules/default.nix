@@ -6,6 +6,7 @@
  imports = [
 	./android.nix
 	./art.nix
+	./comms.nix
 	./developer.nix
 	./firefox.nix
     ./haxxor.nix
