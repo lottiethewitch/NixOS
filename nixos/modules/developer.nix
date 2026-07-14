@@ -7,6 +7,7 @@
 	proxyman
 	scilab-bin
 	vscodium-fhs
+	helix
   ];
 
 }
