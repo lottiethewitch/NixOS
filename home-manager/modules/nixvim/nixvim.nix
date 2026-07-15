@@ -135,6 +135,10 @@
 		enable = true;
 		servers = {
 
+		  clangd = {
+			enable = true;
+		  };
+
 		  jedi_language_server = {
 			enable = true;
 		  };
