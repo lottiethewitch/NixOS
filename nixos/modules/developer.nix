@@ -9,6 +9,7 @@
 	vscodium-fhs
 	helix
     hugo
+	jetbrains.clion
   ];
 
 }
