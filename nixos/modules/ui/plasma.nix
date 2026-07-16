@@ -26,7 +26,7 @@
         };
       };
 	  config = {
-		common.default = [ "kde" ];
+		common.default = [  "gtk" "kde" ];
 	  };
       extraPortals = [
         pkgs.xdg-desktop-portal-gtk
