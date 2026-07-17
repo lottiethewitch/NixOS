@@ -10,6 +10,7 @@
 	helix
     hugo
 	jetbrains.clion
+	qtcreator
   ];
 
 }
