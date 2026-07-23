@@ -18,7 +18,10 @@
     nix-direnv.enable = true;
     enableZshIntegration = true;
   };
-  
+ 
+  home-manager.users.lottie = {
+	programs.zsh.enable = true;
+  };
 
   home.sessionPath = [
 	"$HOME/bin"
