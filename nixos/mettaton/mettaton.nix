@@ -10,6 +10,7 @@
       ./hardware-configuration.nix
       ../modules/lisp.nix
 	  ../modules/remote.nix
+	  ../modules/writing.nix
 	];
   
   # Bootloader.
