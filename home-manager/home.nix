@@ -18,7 +18,16 @@
     nix-direnv.enable = true;
     enableZshIntegration = true;
   };
+  
 
+  home.sessionPath = [
+	"$HOME/bin"
+  ];
+
+
+  programs.kitty = {
+	enable = true;
+  };
 
   home.stateVersion = "25.11"; # Please read the comment before changing.
 

@@ -1,8 +1,8 @@
-{ pkgs, ... }: 
+{ pkgs, lib, ... }:
 
 {
   environment.systemPackages = with pkgs; [
-	sherlock
-	librewolf-bin
+	# include whatever below :3
   ];
+
 }

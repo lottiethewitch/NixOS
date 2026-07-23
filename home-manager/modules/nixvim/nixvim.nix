@@ -1,4 +1,4 @@
-{ config, pkgs, inputs, ... }:
+{ pkgs, inputs, ... }:
 
 {	
 
@@ -14,10 +14,7 @@
 	  tokyonight.enable = true;
 	};
 
-
-
 	enable = true;   ### morgan freeman
-
 
 	defaultEditor = true; ### Editor settings
 	nixpkgs.useGlobalPackages = true;
@@ -26,6 +23,7 @@
 
 	luaLoader.enable = true;
 
+	# This may not even be necessary but im lazy and dont wanna fix it
 	extraPackages = with pkgs; [
 	  ripgrep
 	  lazygit
@@ -38,9 +36,7 @@
 	  lua-language-server
 	];
 
-
 	### *guy who does not want to write lua voice*: Here's some lua
-
 
 	extraConfigLua = ''
 					 vim.opt.cursorline = true
@@ -55,8 +51,8 @@
 
 	plugins = {
 
-	  diffview.enable = true;
-	  gitsigns.enable = true;
+	  bufferline.enable = true;
+	 
 	  cmp = {
 		enable = true;
 		autoEnableSources = true;
@@ -91,7 +87,9 @@
 		enable = true;
 		autoLoad = true;
 	  };
-
+	 
+	  diffview.enable = true;
+	  
 	  emmet = {
 		enable = true;
 		autoLoad = true;
@@ -119,9 +117,10 @@
 		recommendedSettings = true;
 	  };
 
+	  gitsigns.enable = true;
+	
 	  harpoon.enable = true;
 
-	  bufferline.enable = true;
 	  lualine.enable = true;
 
 	  indent-blankline.enable = true;
@@ -135,6 +134,14 @@
 		inlayHints = true;
 		enable = true;
 		servers = {
+
+		  clangd = {
+			enable = true;
+		  };
+
+		  jedi_language_server = {
+			enable = true;
+		  };
 
 		  tflint = {
 			enable = true;
@@ -171,7 +178,12 @@
 		  };
 		  postgres_lsp.enable = true;
 		  cssls.enable = true;
+		  jdtls.enable = true;
 		};
+	  };
+
+	  lspkind = {
+		enable = true;
 	  };
 
 	  luasnip = {
@@ -184,7 +196,9 @@
 	  nvim-tree = {
 		enable = true;
 		autoLoad = true;
+		autoClose = false;
 		openOnSetup = true;
+		openOnSetupFile = true; # I like seeing my file tree 
 	  };
 
 	  rainbow = {
@@ -192,6 +206,15 @@
 		autoLoad = true;
 	  };
 
+	  render-markdown = {
+		enable = true;
+		autoLoad = true;
+	  };
+	  
+	  spring-boot = {
+		enable = true;
+		autoLoad = true; # I get that this makes load times longer but im lazy
+	  };
 	  treesitter = {
 		enable = true;
 		nixGrammars = true;
@@ -203,6 +226,7 @@
 		  eex
 		  html
 		  css
+		  java
 		  javascript
 		  typescript
 		  json
@@ -220,9 +244,12 @@
 		  toml
 		  xml
 		  nix
+		  python
 		];
 	  };
+
 	  telescope.enable = true;
+	  
 	  web-devicons = {
 		enable = true;
 		autoLoad = true;
