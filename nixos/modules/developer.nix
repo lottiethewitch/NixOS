@@ -7,10 +7,12 @@
 	proxyman
 	scilab-bin
 	vscodium-fhs
+	vscode-fhs
 	helix
     hugo
 	jetbrains.clion
 	qtcreator
+	godot
   ];
 
 }
