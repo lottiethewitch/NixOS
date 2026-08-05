@@ -7,5 +7,6 @@
    inkscape
    kdePackages.wacomtablet
    krita
- ];
+   makehuman
+  ];
 }
