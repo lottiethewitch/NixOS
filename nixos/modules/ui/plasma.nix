@@ -58,10 +58,12 @@
   environment.systemPackages = with pkgs; [
 	kdePackages.partitionmanager
 	kdePackages.xdg-desktop-portal-kde
+	kdePackages.wacomtablet
 	xdg-desktop-portal-gtk
 	papirus-icon-theme
 	kde-rounded-corners
 	nordic
+  
   ];
 
   xdg = {
