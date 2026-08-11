@@ -188,7 +188,6 @@
 	yt-dlp
 	adwaita-icon-theme
 	htop
-	obsidian
 	xivlauncher
 	wine-staging
 	xclip
