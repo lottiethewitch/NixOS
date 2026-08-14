@@ -175,7 +175,6 @@
   # List packages installed in system profile. To search, run:
   # $ nix search wget
   environment.systemPackages = with pkgs; [
-	discord
 	terminator
 	calibre
 	libimobiledevice
@@ -196,6 +195,7 @@
 	tmux
 	kitty-themes
 	jetbrains.idea
+	ollama-cuda
   ];
 
   # List services that you want to enable:
