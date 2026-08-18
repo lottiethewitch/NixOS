@@ -78,6 +78,10 @@
 		enable = true;
 	  };
 
+	  conform-nvim = {
+		enable = true;
+	  };
+
 	  dap = {
 		enable = true;
 		autoLoad = true;
