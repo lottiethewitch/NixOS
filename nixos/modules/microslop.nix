@@ -8,7 +8,6 @@
     bottles
     cabextract
     mono
-    microsoft-edge
     geckodriver 
   ];
 }
