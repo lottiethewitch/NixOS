@@ -6,7 +6,7 @@
 	inputs.nixvim.homeModules.nixvim
   ];
 
-  home.shellAliases.v = "nvim";
+  home.shellAliases.v = "nvim";:
 
   programs.nixvim = {
 
@@ -254,6 +254,10 @@
 
 	  telescope.enable = true;
 	  
+	  vimtex = {
+		enable = true;
+	  };
+
 	  web-devicons = {
 		enable = true;
 		autoLoad = true;
