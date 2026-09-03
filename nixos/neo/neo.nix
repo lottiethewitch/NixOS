@@ -47,6 +47,12 @@
   # Virtualization
   services.rpcbind.enable = true;
 
+  # UDEV rules for USB flashing STM32FE* Microcontrollers
+  services.udev.extraRules = ''
+	SUBSYSTEM=="usb", ATTR{idVendor}=="0483", ATTR{idProduct}=="374b", MODE="0666"
+	SUBSYSTEM=="usb", ATTR{idVendor}=="0483", ATTR{idProduct}=="374a", MODE="0666"
+  '';
+
   programs.zsh.enable = true;
 
   fonts.packages = builtins.filter lib.attrsets.isDerivation (builtins.attrValues pkgs.nerd-fonts);
