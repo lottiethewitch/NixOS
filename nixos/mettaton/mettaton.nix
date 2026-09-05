@@ -9,7 +9,7 @@
     [ # Include the results of the hardware scan.
       ./hardware-configuration.nix
       ../modules/lisp.nix
-
+	  ../modules/remote.nix
 	];
   
   # Bootloader.
