@@ -6,7 +6,7 @@
 	inputs.nixvim.homeModules.nixvim
   ];
 
-  home.shellAliases.v = "nvim";
+  home.shellAliases.v = "nvim";:
 
   programs.nixvim = {
 
@@ -75,6 +75,10 @@
 	  colorizer.enable = true;
 
 	  comfy-line-numbers = {
+		enable = true;
+	  };
+
+	  conform-nvim = {
 		enable = true;
 	  };
 
@@ -250,6 +254,10 @@
 
 	  telescope.enable = true;
 	  
+	  vimtex = {
+		enable = true;
+	  };
+
 	  web-devicons = {
 		enable = true;
 		autoLoad = true;

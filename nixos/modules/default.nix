@@ -1,4 +1,5 @@
 {
+  pkgs,
   ...
 }:
 
@@ -20,4 +21,8 @@
 	./virt.nix
 	./writing.nix
  ];
+
+  environment.systemPackages = with pkgs; [
+	kiwix
+  ];
 }

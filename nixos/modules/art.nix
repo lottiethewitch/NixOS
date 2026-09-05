@@ -7,5 +7,5 @@
    inkscape
    kdePackages.wacomtablet
    krita
- ];
+  ];
 }

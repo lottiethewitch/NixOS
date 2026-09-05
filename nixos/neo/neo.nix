@@ -47,6 +47,12 @@
   # Virtualization
   services.rpcbind.enable = true;
 
+  # UDEV rules for USB flashing STM32FE* Microcontrollers
+  services.udev.extraRules = ''
+	SUBSYSTEM=="usb", ATTR{idVendor}=="0483", ATTR{idProduct}=="374b", MODE="0666"
+	SUBSYSTEM=="usb", ATTR{idVendor}=="0483", ATTR{idProduct}=="374a", MODE="0666"
+  '';
+
   programs.zsh.enable = true;
 
   fonts.packages = builtins.filter lib.attrsets.isDerivation (builtins.attrValues pkgs.nerd-fonts);
@@ -175,7 +181,7 @@
   # List packages installed in system profile. To search, run:
   # $ nix search wget
   environment.systemPackages = with pkgs; [
-	discord
+	brave
 	terminator
 	calibre
 	libimobiledevice
@@ -188,7 +194,6 @@
 	yt-dlp
 	adwaita-icon-theme
 	htop
-	obsidian
 	xivlauncher
 	wine-staging
 	xclip
@@ -197,6 +202,7 @@
 	tmux
 	kitty-themes
 	jetbrains.idea
+	ollama-cuda
   ];
 
   # List services that you want to enable:
