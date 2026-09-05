@@ -11,6 +11,7 @@
       ../modules/lisp.nix
 	  ../modules/remote.nix
 	  ../modules/writing.nix
+	  ../modules/steam.nix
 	];
   
   # Bootloader.

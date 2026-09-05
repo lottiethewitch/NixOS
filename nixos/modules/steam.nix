@@ -1,6 +1,13 @@
 {  pkgs, ... }: 
 {
-	environment.systemPackages = with pkgs; [
-		steam-run
-	];
+  programs.steam = {
+	enable = true;
+	localNetworkGameTransfers.openFirewall = true;    
+  };
+
+  environment.systemPackages = with pkgs; [
+	steam-run
+	steam
+  ];
+
 }
