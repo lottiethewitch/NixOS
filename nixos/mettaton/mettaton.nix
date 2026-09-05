@@ -10,6 +10,7 @@
       ./hardware-configuration.nix
       ../modules/lisp.nix
 	  ../modules/remote.nix
+	  ../modules/writing.nix
 	];
   
   # Bootloader.
@@ -20,20 +21,7 @@
   boot.kernelPackages = pkgs.linuxPackages_latest;
 
 
-  nix = let
-	flakeInputs = lib.filterAttrs (_: lib.isType "flake") inputs;
-  in {
-	settings = {
-	  experimental-features = ["nix-command" "flakes"];
-	  flake-registry = "";
-	  nix-path = config.nix.nixPath;
-	};
-	channel.enable = true;
-
-	registry = lib.mapAttrs(_: flake: {inherit flake;}) flakeInputs;
-	nixPath = lib.mapAttrsToList (n: _: "${n}=flake:${n}") flakeInputs;
-
-	};
+  nix.settings.experimental-features = [ "nix-command" "flakes" ];
 
   networking.hostName = "mettaton"; # Define your hostname.
   # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
@@ -104,6 +92,7 @@
 
   # Define a user account. Don't forget to set a password with ‘passwd’.
   users.users."lottie" = {
+	shell = pkgs.zsh;
     isNormalUser = true;
     description = "lottie";
     extraGroups = [ "networkmanager" "wheel" ];
@@ -133,6 +122,8 @@
   #  wget
 	firefox-bin
 	obsidian
+	calibre
+	nfs-utils
   ];
 
   # Some programs need SUID wrappers, can be configured further or are

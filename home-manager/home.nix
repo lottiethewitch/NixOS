@@ -18,7 +18,7 @@
     nix-direnv.enable = true;
     enableZshIntegration = true;
   };
-  
+ 
 
   home.sessionPath = [
 	"$HOME/bin"
