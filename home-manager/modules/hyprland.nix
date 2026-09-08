@@ -9,6 +9,9 @@
   	enable = true;
 	package = null;
 	portalPackage = null;
+	plugins = with pkgs; [
+
+	];
 
 
 	settings = {
