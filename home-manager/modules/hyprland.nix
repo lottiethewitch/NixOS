@@ -4,8 +4,12 @@
   home.sessionVariables.NIXOS_OZONE_WL = "1";
   programs.kitty.enable = true;
   wayland.windowManager.hyprland = {
-
+	
+	# We want to use our system packages so systemd works lol
   	enable = true;
+	package = null;
+	portalPackage = null;
+
 
 	settings = {
 	  "$mod" = "SUPER";
