@@ -18,6 +18,8 @@
 	  require(./lua/hyprland.lua)
 	'';
 
+	configType = "lua";
+
 	package = null;
 	portalPackage = null;
 
