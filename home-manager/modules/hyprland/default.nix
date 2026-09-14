@@ -14,15 +14,9 @@
 	# We want to use our system packages so systemd works lol
 	enable = true;
 
-	extraLuaFiles = {
-
-	  "hyprland" = {
-		content = ./lua/hyprland.lua;
-		autoLoad = true;
-	  };
-
-	};
-
+	extraConfig = ''
+	  require(./lua/hyprland.lua)
+	'';
 
 	package = null;
 	portalPackage = null;
