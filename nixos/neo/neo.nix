@@ -10,7 +10,6 @@
 	  ../modules
 	  ../modules/ui/niri.nix
 	  ../modules/ui/plasma.nix
-	  ../modules/ui/hypr.nix
 	  ../modules/nvidia/nvidia.nix
 	  ./hardware-configuration.nix
 	];
