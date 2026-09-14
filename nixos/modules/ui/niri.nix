@@ -2,6 +2,8 @@
 
 {
 
+  programs.niri.enable = true;
+
   services.greetd = {
 	enable = true;
 	settings = {
