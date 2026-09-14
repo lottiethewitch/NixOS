@@ -104,7 +104,7 @@ input {
     position x=1280 y=0
 }
 
-/-output "DP-1" {
+output "DP-1" {
     // Uncomment this line to disable this output.
     // off
 
@@ -135,7 +135,7 @@ input {
     position x=2560 y=0
 }
 
-/-output "DP-2" {
+output "DP-2" {
     // Uncomment this line to disable this output.
     // off
 
@@ -166,7 +166,7 @@ input {
     position x=-2560 y=0
 }
 
-/-output "DP-3" {
+output "DP-3" {
     // Uncomment this line to disable this output.
     // off
 
@@ -197,7 +197,7 @@ input {
     position x=0 y=0
 }
 
-/-output "HDMI-A-1" {
+output "HDMI-A-1" {
     // Uncomment this line to disable this output.
     // off
 
