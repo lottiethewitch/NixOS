@@ -4,8 +4,6 @@
   programs.noctalia = {
 	enable = true;
 	systemd.enable = true;
-	settings = {
-	  # configure options
-	};
+	settings = "./noctalia.toml";
   };
 }
