@@ -4,7 +4,6 @@
   imports = [
     ./modules
     ./modules/nixvim
-	inputs.noctalia.homeManager.noctalia
   ];
 
 
