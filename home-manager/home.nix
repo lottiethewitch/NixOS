@@ -1,9 +1,10 @@
-{ config, pkgs, ... }:
+{ inputs, config, pkgs, ... }:
 {
 
   imports = [
     ./modules
     ./modules/nixvim
+    inputs.noctalia.homeModules.default
   ];
 
 
@@ -15,10 +16,15 @@
  
   programs.direnv = {
     enable = true;
-    nix-direnv.enable = true;
-    enableZshIntegration = true;
+	nix-direnv.enable = true;
+	enableZshIntegration = true;
   };
- 
+
+  programs.noctalia = {
+	enable = true;
+	systemd.enable = true;
+	settings = ./dotfiles/noctalia/config.toml;
+  };
 
   home.sessionPath = [
 	"$HOME/bin"
@@ -33,6 +39,9 @@
 
   # Home Manager is pretty good at managing dotfiles. The primary way to manage
   # plain files is through 'home.file'.
+
+  xdg.configFile."niri/config.kdl".source = ./dotfiles/niri/config.kdl;
+
   home.file = {
     # # Building this configuration will create a copy of 'dotfiles/screenrc' in
     # # the Nix store. Activating the configuration will then make '~/.screenrc' a

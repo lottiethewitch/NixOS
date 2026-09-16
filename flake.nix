@@ -2,110 +2,99 @@
   description = "what if we were bitches";
 
   inputs = {
-    # Nixpkgs
-    nixpkgs.url = "github:nixos/nixpkgs/release-26.05";
+	# Nixpkgs
+	nixpkgs.url = "github:nixos/nixpkgs/release-26.05";
 
-    # Home manager !
-    home-manager = {
-      url = "github:nix-community/home-manager/release-26.05";
-      inputs.nixpkgs.follows = "nixpkgs";
+	# Home manager !
+	home-manager = {
+	  url = "github:nix-community/home-manager/release-26.05";
+	  inputs.nixpkgs.follows = "nixpkgs";
+	};
+
+	nixvim = {
+	  url = "github:nix-community/nixvim/nixos-26.05";
+	  inputs.nixpkgs.follows = "nixpkgs";
+	};
+
+	noctalia = {
+      url = "github:noctalia-dev/noctalia";
+      inputs.nixpkgs.follows = "nixpkgs"; # this line is optional, prevents downloading two versions of nixpkgs but disables cache
     };
 
-    nixvim = {
-      url = "github:nix-community/nixvim/nixos-26.05";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
   };
 
   outputs = {
-    self,
-    nixpkgs,
-    home-manager,
-    nixvim,
-    ...
-  } @ inputs: let
-  in {
-    # NixOS configuration entrypoint
-    # Available through 'nixos-rebuild --flake .#your-hostname'
-    nixosConfigurations = {
-      # FIXME replace with your hostname
-      vader = nixpkgs.lib.nixosSystem {
-        specialArgs = {inherit inputs;};
-        # > Our main nixos configuration file <
-        modules = with inputs; [
-          ./nixos/vader/vader.nix
-        ];
-      };
-
-      anakin = nixpkgs.lib.nixosSystem {
-	 specialArgs = {inherit inputs;};
-         modules = with inputs; [
-          ./nixos/anakin/anakin.nix
-        ];
-      };
- 
-	  mettaton = nixpkgs.lib.nixosSystem {
+	self,
+	nixpkgs,
+	home-manager,
+	nixvim,
+	...
+	} @ inputs: let
+	in {
+	  # NixOS configuration entrypoint
+	  # Available through 'nixos-rebuild --flake .#your-hostname'
+	  nixosConfigurations = {
+		mettaton = nixpkgs.lib.nixosSystem {
 		  specialArgs = {inherit inputs;};
-         modules = with inputs; [
-          ./nixos/mettaton/mettaton.nix
-        ];
-      };
+		  modules = with inputs; [
+			./nixos/mettaton/mettaton.nix
+		  ];
+		};
+
+		neo = nixpkgs.lib.nixosSystem {
+		  specialArgs = {inherit inputs;};
+		  # > Our main nixos configuration file <
+		  modules = with inputs; [
+			./nixos/neo/neo.nix
+		  ];
+		};
+
+	  };
+
+	  # Standalone home-manager configuration entrypoint
+	  # Available through 'home-manager --flake .#your-username@your-hostname'
+	  homeConfigurations = {
+		# FIXME replace with your username@hostname
+		"lottie@vader" = home-manager.lib.homeManagerConfiguration {
+		  # Home-manager requires 'pkgs' instance
+		  pkgs = nixpkgs.legacyPackages.x86_64-linux; # FIXME replace x86_64-linux with your architecure 
+		  extraSpecialArgs = {inherit inputs;};
+		  # > Our main home-manager configuration file <
+		  modules = [
+			./home-manager/home.nix
+		  ];
+		};
+
+		"lottie@mettaton" = home-manager.lib.homeManagerConfiguration {
+		  # Home-manager requires 'pkgs' instance
+		  pkgs = nixpkgs.legacyPackages.x86_64-linux; # FIXME replace x86_64-linux with your architecure 
+		  extraSpecialArgs = {inherit inputs;};
+		  # > Our main home-manager configuration file <
+		  modules = [
+			./home-manager/home.nix
+		  ];
+		};
 
 
-      neo = nixpkgs.lib.nixosSystem {
-        specialArgs = {inherit inputs;};
-        # > Our main nixos configuration file <
-        modules = with inputs; [
-          ./nixos/neo/neo.nix
-        ];
-      };
+		"lottie@neo" = home-manager.lib.homeManagerConfiguration {
+		  # Home-manager requires 'pkgs' instance
+		  pkgs = nixpkgs.legacyPackages.x86_64-linux; # FIXME replace x86_64-linux with your architecure 
+		  extraSpecialArgs = {inherit inputs;};
+		  # > Our main home-manager configuration file <
+		  modules = [
+			./home-manager/home.nix
+		  ];
+		};
 
-    };
-
-    # Standalone home-manager configuration entrypoint
-    # Available through 'home-manager --flake .#your-username@your-hostname'
-    homeConfigurations = {
-      # FIXME replace with your username@hostname
-      "lottie@vader" = home-manager.lib.homeManagerConfiguration {
-        # Home-manager requires 'pkgs' instance
-        pkgs = nixpkgs.legacyPackages.x86_64-linux; # FIXME replace x86_64-linux with your architecure 
-        extraSpecialArgs = {inherit inputs;};
-        # > Our main home-manager configuration file <
-        modules = [
-          ./home-manager/home.nix
-          ];
-      };
-
-       "lottie@mettaton" = home-manager.lib.homeManagerConfiguration {
-        # Home-manager requires 'pkgs' instance
-        pkgs = nixpkgs.legacyPackages.x86_64-linux; # FIXME replace x86_64-linux with your architecure 
-        extraSpecialArgs = {inherit inputs;};
-        # > Our main home-manager configuration file <
-        modules = [
-          ./home-manager/home.nix
-          ];
-      };
-
-    
-      "lottie@neo" = home-manager.lib.homeManagerConfiguration {
-        # Home-manager requires 'pkgs' instance
-        pkgs = nixpkgs.legacyPackages.x86_64-linux; # FIXME replace x86_64-linux with your architecure 
-        extraSpecialArgs = {inherit inputs;};
-        # > Our main home-manager configuration file <
-        modules = [
-          ./home-manager/home.nix
-          ];
-      };
-
-     "lottie@anakin" = home-manager.lib.homeManagerConfiguration {
-        # Home-manager requires 'pkgs' instance
-        pkgs = nixpkgs.legacyPackages.x86_64-linux; # FIXME replace x86_64-linux with your architecure 
-        extraSpecialArgs = {inherit inputs;};
-        # > Our main home-manager configuration file <
-        modules = [
-          ./home-manager/home.nix
-          ];
-      };
-    };
-  };
+		"lottie@anakin" = home-manager.lib.homeManagerConfiguration {
+		  # Home-manager requires 'pkgs' instance
+		  pkgs = nixpkgs.legacyPackages.x86_64-linux; # FIXME replace x86_64-linux with your architecure 
+		  extraSpecialArgs = {inherit inputs;};
+		  # > Our main home-manager configuration file <
+		  modules = [
+			./home-manager/home.nix
+		  ];
+		};
+	  };
+	};
 }
