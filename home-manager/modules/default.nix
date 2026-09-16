@@ -10,6 +10,5 @@
     ./kitty.nix
     ./nixvim
     ./zsh.nix
-    ./noctalia
   ];
 }
