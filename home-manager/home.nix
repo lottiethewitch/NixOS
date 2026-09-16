@@ -1,4 +1,4 @@
-{ inputs, config, pkgs, ... }:
+{ inputs, pkgs, ... }:
 {
 
   imports = [
@@ -75,9 +75,7 @@
 
   systemd.user.startServices = "sd-switch";
 
-  # Let Home Manager install and manage itself.
   programs.home-manager.enable = true;
-
 
   home.extraProfileCommands = ''
 	  if [[ -w $out/share/mime && -w $out/share/mime/packages && -d $out/share/mime/packages ]]; then
