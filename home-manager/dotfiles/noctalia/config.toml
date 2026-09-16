@@ -3,3 +3,6 @@ mode = "dark"
 
 [bar.default]
 position = "top"
+smart_auto_hide = "false"
+show_on_workspace_switch = "true"
+margin_ends = 0
