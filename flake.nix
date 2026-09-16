@@ -30,7 +30,6 @@
 	} @ inputs: let
 	in {
 	  # NixOS configuration entrypoint
-	  # Available through 'nixos-rebuild --flake .#your-hostname'
 	  nixosConfigurations = {
 		mettaton = nixpkgs.lib.nixosSystem {
 		  specialArgs = {inherit inputs;};
@@ -46,11 +45,9 @@
 			./nixos/neo/neo.nix
 		  ];
 		};
-
 	  };
 
 	  # Standalone home-manager configuration entrypoint
-	  # Available through 'home-manager --flake .#your-username@your-hostname'
 	  homeConfigurations = {
 		"lottie@mettaton" = home-manager.lib.homeManagerConfiguration {
 		  # Home-manager requires 'pkgs' instance
