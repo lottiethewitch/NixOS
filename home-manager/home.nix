@@ -1,10 +1,10 @@
-{ config, pkgs, ... }:
+{ inputs, config, pkgs, ... }:
 {
 
   imports = [
     ./modules
     ./modules/nixvim
-	
+	inputs.noctalia	
   ];
 
 
@@ -20,6 +20,13 @@
     enableZshIntegration = true;
   };
  
+  home-manager.users.lottie = {
+	programs.noctalia = {
+	  enable = true;
+	  systemd.enable = true;
+	  settings = "./dotfiles/noctalia/noctalia.toml";
+	};
+  };
 
   home.sessionPath = [
 	"$HOME/bin"
