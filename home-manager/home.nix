@@ -4,6 +4,7 @@
   imports = [
     ./modules
     ./modules/nixvim
+    inputs.noctalia.homeModules.default
   ];
 
 
@@ -15,16 +16,14 @@
  
   programs.direnv = {
     enable = true;
-    nix-direnv.enable = true;
-    enableZshIntegration = true;
+	nix-direnv.enable = true;
+	enableZshIntegration = true;
   };
- 
-  home-manager.users.lottie = {
-	programs.noctalia = {
-	  enable = true;
-	  systemd.enable = true;
-	  settings = "./dotfiles/noctalia/noctalia.toml";
-	};
+
+  programs.noctalia = {
+	enable = true;
+	systemd.enable = true;
+	settings = "./dotfiles/noctalia/noctalia.toml";
   };
 
   home.sessionPath = [
