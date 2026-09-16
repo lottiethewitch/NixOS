@@ -177,27 +177,23 @@
   # $ nix search wget
   environment.systemPackages = with pkgs; [
 	brave
-	terminator
 	calibre
 	libimobiledevice
 	ifuse # optional, to mount using 'ifuse'
 	git
-	rockbox-utility
 	kdePackages.partitionmanager
 	mtools
 	nfs-utils
-	yt-dlp
 	adwaita-icon-theme
 	htop
 	xivlauncher
 	wine-staging
 	xclip
 	qbittorrent
-	htop
+	btop
 	tmux
 	kitty-themes
 	jetbrains.idea
-	ollama-cuda
   ];
 
   # List services that you want to enable:
