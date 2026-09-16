@@ -23,7 +23,7 @@
   programs.noctalia = {
 	enable = true;
 	systemd.enable = true;
-	settings = ./dotfiles/noctalia/noctalia.toml;
+	settings = ./dotfiles/noctalia/config.toml;
   };
 
   home.sessionPath = [
