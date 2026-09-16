@@ -9,6 +9,7 @@
     ./git.nix
     ./kitty.nix
     ./nixvim
-    ./zsh.nix
+    ./yubikey.nix
+	./zsh.nix
   ];
 }
