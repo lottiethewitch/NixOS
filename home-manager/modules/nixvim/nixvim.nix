@@ -46,9 +46,8 @@
 					 vim.opt.smarttab = true
 					 '';
 
-  };
 
-  plugins = {
+	plugins = {
 
 	  bufferline.enable = true;
 
@@ -262,5 +261,5 @@
 		autoLoad = true;
 	  };
 	};
-
+  };
 }
