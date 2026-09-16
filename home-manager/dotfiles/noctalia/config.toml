@@ -6,3 +6,4 @@ position = "top"
 smart_auto_hide = "false"
 show_on_workspace_switch = "true"
 margin_ends = 0
+radius = 0
