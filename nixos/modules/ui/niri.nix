@@ -1,4 +1,4 @@
-{ pkgs, ... }:
+{ inputs, pkgs, ... }:
 
 {
   programs.niri.enable = true;
@@ -10,6 +10,7 @@
 	noctalia-shell
 	niri
 	xwayland-satellite
+    inputs.noctalia.packages.${pkgs.stdenv.hostPlatform.system}.default
   ];
 
 }
