@@ -1,5 +1,6 @@
 [theme]
 mode = "dark"
+shell_mode = "follow"
 
 [bar.default]
 position = "top"
@@ -12,6 +13,6 @@ radius = 0
 min_length = 80
 max_length = 260
 icon_size = 14
-title_scroll = "on_hover"
+title_scroll = "always"
 display = "icon_and_text"
 show_empty_label = true
