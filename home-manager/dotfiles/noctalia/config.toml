@@ -7,3 +7,11 @@ smart_auto_hide = "false"
 show_on_workspace_switch = "true"
 margin_ends = 0
 radius = 0
+
+[widget.active_window]
+min_length = 80
+max_length = 260
+icon_size = 14
+title_scroll = "on_hover"
+display = "icon_and_text"
+show_empty_label = true
