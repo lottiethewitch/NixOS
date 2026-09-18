@@ -2,7 +2,7 @@
 
 {
   # This module is just kind of going to manage both my display manager and xdg because I want to unify them and cannot think of a better place to put them tbh!!
-  let
+  theme = let
 	sddm-astronaut = (pkgs.sddm-astronaut.override {
 	  embeddedTheme = "japanese_aesthetic";  # or any other theme
 	  themeConfig = {
@@ -30,7 +30,7 @@
 	  ];
 	  theme = "sddm-astronaut-theme";
 	};
-  }
+  };
   environment.systemPackages = with pkgs; [
 	xdg-desktop-portal-gtk
 	xdg-desktop-portal-gnome
