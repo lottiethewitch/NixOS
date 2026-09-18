@@ -8,7 +8,7 @@
 	  themeConfig = {
 		# Customize colors and settings
 		HeaderTextColor = "#d5c4a1";
-		Background = "Backgrounds/your-custom-background.png";
+		Background = "../../sysui/cyberpunk-city-night-view-4k-8l.jpg";
 		# ... other theme configuration options
 	  };
 	}).overrideAttrs (oldAttrs: {
@@ -16,7 +16,7 @@
 	  installPhase = oldAttrs.installPhase + ''
 		chmod u+w $out/share/sddm/themes/sddm-astronaut-theme/Backgrounds/
 		cp ${./relative/path/to/your-custom-background.png} \
-		$out/share/sddm/themes/sddm-astronaut-theme/Backgrounds/your-custom-background.png
+		$out/share/sddm/themes/sddm-astronaut-theme/Backgrounds/cyberpunk-city-night-view-4k-8l.jpg
 	  '';
 	});
   in {
