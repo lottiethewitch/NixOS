@@ -21,7 +21,10 @@ let
 in {
 
   services.displayManager.sddm = {
-	wayland.enable = true;
+	wayland = {
+	  enable = true;
+	  compositor = "kwin";
+	};
 	enable = true;
 	package = pkgs.kdePackages.sddm;
 	extraPackages = with pkgs; [
