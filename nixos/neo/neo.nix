@@ -1,5 +1,3 @@
-# Edit this configuration file to define what should be installed on
-# your system.  Help is available in the configuration.nix(5) man page
 # and in the NixOS manual (accessible by running ‘nixos-help’).
 
 { inputs, config, pkgs, lib, ... }:
@@ -8,8 +6,8 @@
   imports =
 	[ # Include the results of the hardware scan.
 	  ../modules
+	  ../modules/display
 	  ../modules/ui/niri.nix
-	  ../modules/ui/plasma.nix
 	  ../modules/nvidia/nvidia.nix
 	  ./hardware-configuration.nix
 	];
@@ -78,13 +76,18 @@
   services.mullvad-vpn.package = pkgs.mullvad-vpn;
   networking.nameservers = ["1.1.1.1#one.one.one.one" "1.0.0.1#one.one.one.one" ];
 
-  services.resolved = { 
+  services.resolved = {
+	settings = {
+	  Resolve = {
+		DNSOverTLS = "true";
+		DNSSEC = "true";
+		Domains = [ "~." ];
+		FallbackDns = [ "1.1.1.1#one.one.one.one" "1.0.0.1#one.one.one.one" ];
+	  };
+	};
 	enable = true; 
-	dnssec = "true"; 
-	domains = [ "~." ];
-	fallbackDns = [ "1.1.1.1#one.one.one.one" "1.0.0.1#one.one.one.one" ];
-	dnsovertls = "true";
   };
+
   # Set your time zone.
   time.timeZone = "America/Chicago";
 
@@ -177,27 +180,22 @@
   # $ nix search wget
   environment.systemPackages = with pkgs; [
 	brave
-	terminator
 	calibre
 	libimobiledevice
 	ifuse # optional, to mount using 'ifuse'
 	git
-	rockbox-utility
 	kdePackages.partitionmanager
 	mtools
 	nfs-utils
-	yt-dlp
 	adwaita-icon-theme
-	htop
 	xivlauncher
 	wine-staging
 	xclip
 	qbittorrent
-	htop
+	btop
 	tmux
 	kitty-themes
 	jetbrains.idea
-	ollama-cuda
   ];
 
   # List services that you want to enable:

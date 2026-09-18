@@ -1,11 +1,11 @@
 { pkgs, ... }:
 
 { 
-   environment.systemPackages = with pkgs; [
-	yt-dlp
+  environment.systemPackages = with pkgs; [
 	bitwig-studio
-	vital
 	musescore
-	];
-
+	rockbox-utility
+	vital
+	yt-dlp
+  ];
 }

@@ -66,7 +66,7 @@
   
   ];
 
-  xdg = {
+   xdg = {
 	portal = {
       enable = true;
       wlr = {
@@ -87,4 +87,6 @@
       ];
     };
   };
-}
+
+
+ }

@@ -5,7 +5,6 @@
 
 {
  imports = [
-	./android.nix
 	./art.nix
 	./comms.nix
 	./developer.nix
