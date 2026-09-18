@@ -18,6 +18,10 @@
       homeup = "home-manager switch --flake .#lottie@vader --show-trace";
       dogit = "./home/lottie/Nix/nixscripts/gitcom.sh";
     };
+
+	plugins = [
+	  {name = "powerlevel10k";src = pkgs.zsh-powerlevel10k;file = "share/zsh-powerlevel10k/powerlevel10k.zsh-theme";}
+	];
 	
 	
 	envExtra = ''
