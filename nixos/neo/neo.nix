@@ -76,13 +76,18 @@
   services.mullvad-vpn.package = pkgs.mullvad-vpn;
   networking.nameservers = ["1.1.1.1#one.one.one.one" "1.0.0.1#one.one.one.one" ];
 
-  services.resolved = { 
+  services.resolved = {
+	settings = {
+	  Resolve = {
+		DNSOverTLS = "true";
+		DNSSEC = "true";
+		Domains = [ "~." ];
+		FallbackDns = [ "1.1.1.1#one.one.one.one" "1.0.0.1#one.one.one.one" ];
+	  };
+	};
 	enable = true; 
-	dnssec = "true"; 
-	domains = [ "~." ];
-	fallbackDns = [ "1.1.1.1#one.one.one.one" "1.0.0.1#one.one.one.one" ];
-	dnsovertls = "true";
   };
+
   # Set your time zone.
   time.timeZone = "America/Chicago";
 
