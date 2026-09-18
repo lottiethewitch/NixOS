@@ -8,7 +8,7 @@
     enable = true;
 	enableCompletion = true;
 	syntaxHighlighting.enable = true;
-	enableAutosuggestions.enable = true;
+	autosuggestion.enable = true;
 
     shellAliases = {
       ll = "ls -l";
