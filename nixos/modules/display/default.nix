@@ -14,7 +14,7 @@ let
 	  # Optional: Inject custom background image
 	  installPhase = oldAttrs.installPhase + ''
 		chmod u+w $out/share/sddm/themes/sddm-astronaut-theme/Backgrounds/
-		cp ${./relative/path/to/your-custom-background.png} \
+		cp ${../../sysui/cyberpunk-city-night-view-4k-8l.jpg} \
 		$out/share/sddm/themes/sddm-astronaut-theme/Backgrounds/cyberpunk-city-night-view-4k-8l.jpg
 	  '';
 	});
