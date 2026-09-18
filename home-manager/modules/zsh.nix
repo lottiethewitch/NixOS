@@ -1,7 +1,15 @@
 { pkgs, ... }:
 {
+
+  home.packages = [
+	pkgs.starship
+  ];
   programs.zsh = {
     enable = true;
+	enableCompletion = true;
+	enableBashCompletion = true;
+	syntaxHighlighting.enable = true;
+	autosuggestions.enable = true;
 
     shellAliases = {
       ll = "ls -l";
@@ -10,29 +18,18 @@
       homeup = "home-manager switch --flake .#lottie@vader --show-trace";
       dogit = "./home/lottie/Nix/nixscripts/gitcom.sh";
     };
-
-    # With Zplug:
-    zplug = {
-      enable = true;
-      plugins = [
-        {name = "zsh-users/zsh-autosuggestions";} # Simple plugin installation
-      ];
-    };
-
-    # With Oh-My-Zsh:
-    oh-my-zsh = {
-      enable = true;
-      plugins = [
-        "git"         # also requires `programs.git.enable = true;`
-    ];
-      theme = "agnoster";
-    };
-
+	
+	
 	envExtra = ''
 	  export PATH=$PATH:/$HOME/bin:/$HOME/.config/emacs/bin
 
 	  '';
 
+  
+  };
+
+  programs.starship = {
+	enable = true;
   };
   
   programs.direnv = {
