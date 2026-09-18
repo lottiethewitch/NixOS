@@ -9,7 +9,7 @@
 	enableCompletion = true;
 	enableBashCompletion = true;
 	syntaxHighlighting.enable = true;
-	autosuggestions.enable = true;
+	enableAutosuggestions.enable = true;
 
     shellAliases = {
       ll = "ls -l";
