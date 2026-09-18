@@ -2,8 +2,9 @@
 {
 
   home.packages = [
-	pkgs.starship
+	pkgs.zsh-powerlevel10k
   ];
+
   programs.zsh = {
     enable = true;
 	enableCompletion = true;
