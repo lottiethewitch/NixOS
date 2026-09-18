@@ -21,6 +21,7 @@ let
 in {
 
   services.displayManager.sddm = {
+	wayland.enable = true;
 	enable = true;
 	package = pkgs.kdePackages.sddm;
 	extraPackages = with pkgs; [
