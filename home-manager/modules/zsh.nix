@@ -25,7 +25,7 @@
 	
 	
 	envExtra = ''
-	  export PATH=$PATH:/$HOME/bin:/$HOME/.config/emacs/bin
+	  export PATH=$PATH:/$HOME/bin
 	  eval "$(starship init bash)"
 	  '';
 
