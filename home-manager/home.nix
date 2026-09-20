@@ -41,6 +41,8 @@
   xdg.configFile."niri/config.kdl".source = ./dotfiles/niri/config.kdl;
 
   home.file = {
+
+	".config/starship.toml".source = ./dotfiles/starship.toml;
     # # Building this configuration will create a copy of 'dotfiles/screenrc' in
     # # the Nix store. Activating the configuration will then make '~/.screenrc' a
     # # symlink to the Nix store copy.
