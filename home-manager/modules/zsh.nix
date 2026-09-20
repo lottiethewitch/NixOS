@@ -2,7 +2,7 @@
 {
 
   home.packages = [
-	pkgs.zsh-powerlevel10k
+	pkgs.starship
   ];
 
   programs.zsh = {
