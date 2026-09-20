@@ -26,7 +26,7 @@
 	
 	envExtra = ''
 	  export PATH=$PATH:/$HOME/bin
-	  eval "$(starship init bash)"
+	  eval "$(starship init zsh)"
 	  '';
 
   
