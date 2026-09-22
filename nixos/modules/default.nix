@@ -17,6 +17,7 @@
 	./onepass.nix
 	./postgres.nix
 	./steam.nix
+	./tablet.nix
 	./virt.nix
 	./writing.nix
  ];
