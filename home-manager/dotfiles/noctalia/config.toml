@@ -1,6 +1,10 @@
 [theme]
 mode = "dark"
 shell_mode = "follow"
+source = "community"
+community_palette = "Dracula"
+pure_black_dark = true
+
 
 [bar.default]
 position = "top"
