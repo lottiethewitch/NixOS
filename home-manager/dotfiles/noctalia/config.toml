@@ -1,7 +1,7 @@
 [theme]
 mode = "dark"
 shell_mode = "follow"
-source = "community"
+source = "built-in"
 community_palette = "Dracula"
 pure_black_dark = true
 
