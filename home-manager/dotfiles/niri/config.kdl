@@ -63,7 +63,7 @@ input {
         map-to-output "HDMI-A-1"
         
         // Optional: adjust calibration matrix with six floating-point numbers if needed
-        calibration-matrix 1.0 -0.5 -0.1 0.0 1.0 0.0
+        calibration-matrix 1.0 0.0 -0.1 0.0 1.0 0.0
     }
 
     // Uncomment this to make the mouse warp to the center of newly focused windows.
