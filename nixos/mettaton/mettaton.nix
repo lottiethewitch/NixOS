@@ -9,7 +9,6 @@
     [ # Include the results of the hardware scan.
       ./hardware-configuration.nix
       ../modules/lisp.nix
-	  ../modules/remote.nix
 	  ../modules/writing.nix
 	  ../modules/steam.nix
 	  ../modules/ui/niri.nix
