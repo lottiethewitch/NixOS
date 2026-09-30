@@ -34,6 +34,13 @@
 
 	  conform-nvim = {
 		enable = true;
+		settings = {
+		  formatters_by_ft = {
+			c = ["clangd"];
+			cpp = ["clangd"];
+			python = [ "isort" "black" ];
+		  };
+		};
 	  };
 
 	  dap = {
