@@ -39,6 +39,12 @@
 					 vim.opt.tabstop = 4        
 					 vim.opt.softtabstop = 1
 					 vim.opt.smarttab = true
+					 vim.api.nvim_create_autocmd("BufWritePre", {
+					   pattern = "*",
+					   callback = function(args)
+						 require("conform").format({ bufnr = args.buf })
+					   end,
+					 })
 					 '';
 
 
