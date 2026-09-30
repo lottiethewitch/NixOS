@@ -37,6 +37,7 @@
 		autoLoad = true;
 		settings = {
 		  formatters_by_ft = {
+			nix = ["alejandra"];
 			c = ["clang-format"];
 			cpp = ["clang-format"];
 		  };
