@@ -41,6 +41,10 @@
 			c = ["clang-format"];
 			cpp = ["clang-format"];
 		  };
+		  format_on_save = {
+			timeout_ms = 500;
+			lsp_format = "fallback";
+		  };
 		};
 	  };
 
@@ -62,7 +66,7 @@
 	  };
 
 	  fzf-lua = {
-		enable = true;
+		enable = true;	
 		settings = {
 		  winopts = {
 			height = 0.40;
