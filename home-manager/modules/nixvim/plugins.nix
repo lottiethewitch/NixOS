@@ -34,11 +34,11 @@
 
 	  conform-nvim = {
 		enable = true;
+		autoLoad = true;
 		settings = {
 		  formatters_by_ft = {
-			c = ["clangd"];
-			cpp = ["clangd"];
-			python = [ "isort" "black" ];
+			c = ["clang-format"];
+			cpp = ["clang-format"];
 		  };
 		};
 	  };
