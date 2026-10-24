@@ -4,25 +4,26 @@
 }:
 
 {
- imports = [
-	./art.nix
-	./comms.nix
-	./developer.nix
-	./firefox.nix
+  imports = [
+    ./art.nix
+    ./comms.nix
+    ./developer.nix
+    ./firefox.nix
     ./haxxor.nix
-	./microslop.nix
-	./minecraft.nix
-	./music.nix
-	./notes.nix
-	./onepass.nix
-	./postgres.nix
-	./steam.nix
-	./tablet.nix
-	./virt.nix
-	./writing.nix
- ];
+    ./microslop.nix
+    ./minecraft.nix
+    ./music.nix
+    ./notes.nix
+    ./onepass.nix
+    ./postgres.nix
+    ./steam.nix
+    ./tablet.nix
+    ./virt.nix
+    ./writing.nix
+  ];
 
   environment.systemPackages = with pkgs; [
-	kiwix
+    kiwix
+    zip
   ];
 }
