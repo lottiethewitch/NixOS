@@ -1,40 +1,51 @@
 # and in the NixOS manual (accessible by running ‘nixos-help’).
 
-{ inputs, config, pkgs, lib, ... }:
+{
+  inputs,
+  config,
+  pkgs,
+  lib,
+  ...
+}:
 
 {
-  imports =
-	[ # Include the results of the hardware scan.
-	  ../modules
-	  ../modules/display
-	  ../modules/ui/niri.nix
-	  ../modules/nvidia/nvidia.nix
-	  ./hardware-configuration.nix
-	];
+  imports = [
+    # Include the results of the hardware scan.
+    ../modules
+    ../modules/display
+    ../modules/ui/niri.nix
+    ../modules/nvidia/nvidia.nix
+    ./hardware-configuration.nix
+  ];
   # Bootloader.
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
 
-  nix = let
-	flakeInputs = lib.filterAttrs (_: lib.isType "flake") inputs;
-  in {
-	settings = {
-	  # Enable flakes and new 'nix' command
-	  experimental-features = ["nix-command" "flakes"];
-	  # Opinionated: disable global registry
-	  flake-registry = "";
-	  # Workaround for https://github.com/NixOS/nix/issues/9574
-	  nix-path = config.nix.nixPath;
+  nix =
+    let
+      flakeInputs = lib.filterAttrs (_: lib.isType "flake") inputs;
+    in
+    {
+      settings = {
+        # Enable flakes and new 'nix' command
+        experimental-features = [
+          "nix-command"
+          "flakes"
+        ];
+        # Opinionated: disable global registry
+        flake-registry = "";
+        # Workaround for https://github.com/NixOS/nix/issues/9574
+        nix-path = config.nix.nixPath;
 
-	};
+      };
 
-	# Opinionated: disable channels
-	channel.enable = true;
+      # Opinionated: disable channels
+      channel.enable = true;
 
-	# Opinionated: make flake registry and nix path match flake inputs
-	registry = lib.mapAttrs (_: flake: {inherit flake;}) flakeInputs;
-	nixPath = lib.mapAttrsToList (n: _: "${n}=flake:${n}") flakeInputs;
-  };
+      # Opinionated: make flake registry and nix path match flake inputs
+      registry = lib.mapAttrs (_: flake: { inherit flake; }) flakeInputs;
+      nixPath = lib.mapAttrsToList (n: _: "${n}=flake:${n}") flakeInputs;
+    };
 
   networking.hostName = "neo"; # Define your hostname.
   # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
@@ -47,8 +58,8 @@
 
   # UDEV rules for USB flashing STM32FE* Microcontrollers
   services.udev.extraRules = ''
-	SUBSYSTEM=="usb", ATTR{idVendor}=="0483", ATTR{idProduct}=="374b", MODE="0666"
-	SUBSYSTEM=="usb", ATTR{idVendor}=="0483", ATTR{idProduct}=="374a", MODE="0666"
+    	SUBSYSTEM=="usb", ATTR{idVendor}=="0483", ATTR{idProduct}=="374b", MODE="0666"
+    	SUBSYSTEM=="usb", ATTR{idVendor}=="0483", ATTR{idProduct}=="374a", MODE="0666"
   '';
 
   programs.zsh.enable = true;
@@ -56,36 +67,42 @@
   fonts.packages = builtins.filter lib.attrsets.isDerivation (builtins.attrValues pkgs.nerd-fonts);
 
   virtualisation = {
-	libvirtd = {
-	  enable = true;
-	  qemu = {
-		package = pkgs.qemu_kvm;
-		runAsRoot = true;
-		swtpm.enable = true;
-	  };
-	};
-	docker = {
-	  enable = true;
-	};
+    libvirtd = {
+      enable = true;
+      qemu = {
+        package = pkgs.qemu_kvm;
+        runAsRoot = true;
+        swtpm.enable = true;
+      };
+    };
+    docker = {
+      enable = true;
+    };
   };
   # Enable networking
   networking.networkmanager.enable = true;
 
-  # Mullvad 
+  # Mullvad
   services.mullvad-vpn.enable = true;
   services.mullvad-vpn.package = pkgs.mullvad-vpn;
-  networking.nameservers = ["1.1.1.1#one.one.one.one" "1.0.0.1#one.one.one.one" ];
+  networking.nameservers = [
+    "1.1.1.1#one.one.one.one"
+    "1.0.0.1#one.one.one.one"
+  ];
 
   services.resolved = {
-	settings = {
-	  Resolve = {
-		DNSOverTLS = "true";
-		DNSSEC = "true";
-		Domains = [ "~." ];
-		FallbackDns = [ "1.1.1.1#one.one.one.one" "1.0.0.1#one.one.one.one" ];
-	  };
-	};
-	enable = true; 
+    settings = {
+      Resolve = {
+        DNSOverTLS = "true";
+        DNSSEC = "true";
+        Domains = [ "~." ];
+        FallbackDns = [
+          "1.1.1.1#one.one.one.one"
+          "1.0.0.1#one.one.one.one"
+        ];
+      };
+    };
+    enable = true;
   };
 
   # Set your time zone.
@@ -98,27 +115,26 @@
   i18n.defaultLocale = "en_US.UTF-8";
 
   i18n.extraLocaleSettings = {
-	LC_ADDRESS = "en_US.UTF-8";
-	LC_IDENTIFICATION = "en_US.UTF-8";
-	LC_MEASUREMENT = "en_US.UTF-8";
-	LC_MONETARY = "en_US.UTF-8";
-	LC_NAME = "en_US.UTF-8";
-	LC_NUMERIC = "en_US.UTF-8";
-	LC_PAPER = "en_US.UTF-8";
-	LC_TELEPHONE = "en_US.UTF-8";
-	LC_TIME = "en_US.UTF-8";
+    LC_ADDRESS = "en_US.UTF-8";
+    LC_IDENTIFICATION = "en_US.UTF-8";
+    LC_MEASUREMENT = "en_US.UTF-8";
+    LC_MONETARY = "en_US.UTF-8";
+    LC_NAME = "en_US.UTF-8";
+    LC_NUMERIC = "en_US.UTF-8";
+    LC_PAPER = "en_US.UTF-8";
+    LC_TELEPHONE = "en_US.UTF-8";
+    LC_TIME = "en_US.UTF-8";
   };
 
-
   # Wacom tablets
-  hardware.opentabletdriver.enable = true;
+  hardware.opentabletdriver.enable = false;
   hardware.uinput.enable = true;
   boot.kernelModules = [ "uinput" ];
 
   # Configure keymap in X11
   services.xserver.xkb = {
-	layout = "us";
-	variant = "";
+    layout = "us";
+    variant = "";
   };
 
   # Enable CUPS to print documents.
@@ -130,72 +146,76 @@
   services.pulseaudio.enable = false;
   security.rtkit.enable = true;
   services.pipewire = {
-	enable = true;
-	alsa.enable = true;
-	alsa.support32Bit = true;
-	pulse.enable = true;
-	wireplumber = {
-	  enable = true;
-	  extraConfig = {
-		"10-default-volume" = {
-		  "wireplumber.settings"."device.routes.default-sink-volume" = 0.8; # default is 0.4
-		};
-	  };
-	};
+    enable = true;
+    alsa.enable = true;
+    alsa.support32Bit = true;
+    pulse.enable = true;
+    wireplumber = {
+      enable = true;
+      extraConfig = {
+        "10-default-volume" = {
+          "wireplumber.settings"."device.routes.default-sink-volume" = 0.8; # default is 0.4
+        };
+      };
+    };
   };
 
   programs.obs-studio = {
-	enable = true;
-	plugins = with pkgs.obs-studio-plugins; [
-	  wlrobs
-	  obs-backgroundremoval
-	  obs-pipewire-audio-capture
-	  obs-gstreamer
-	  obs-vkcapture
-	];
+    enable = true;
+    plugins = with pkgs.obs-studio-plugins; [
+      wlrobs
+      obs-backgroundremoval
+      obs-pipewire-audio-capture
+      obs-gstreamer
+      obs-vkcapture
+    ];
   };
-
 
   # Define a user account. Don't forget to set a password with ‘passwd’.
   users.users.lottie = {
-	shell = pkgs.zsh;
-	isNormalUser = true;
-	extraGroups = [ "wheel" "networkmanager" "libvirtd" "docker" ]; 
+    shell = pkgs.zsh;
+    isNormalUser = true;
+    extraGroups = [
+      "wheel"
+      "networkmanager"
+      "libvirtd"
+      "docker"
+    ];
   };
   programs.firefox.enable = true;
 
   # Allow unfree packages
   nixpkgs.config = {
-	allowUnfree = true;
-	android_sdk.accept_license = true;
-  };  
-  
+    allowUnfree = true;
+    android_sdk.accept_license = true;
+  };
+
   services.flatpak.enable = true;
 
   services.usbmuxd = {
-	enable = true;
-	package = pkgs.usbmuxd2;
-  };	  
+    enable = true;
+    package = pkgs.usbmuxd2;
+  };
   # List packages installed in system profile. To search, run:
   # $ nix search wget
   environment.systemPackages = with pkgs; [
-	brave
-	calibre
-	libimobiledevice
-	ifuse # optional, to mount using 'ifuse'
-	git
-	kdePackages.partitionmanager
-	mtools
-	nfs-utils
-	adwaita-icon-theme
-	xivlauncher
-	wine-staging
-	xclip
-	qbittorrent
-	btop
-	tmux
-	kitty-themes
-	jetbrains.idea
+    brave
+    calibre
+    libimobiledevice
+    ifuse # optional, to mount using 'ifuse'
+    git
+    kdePackages.partitionmanager
+    mtools
+    nfs-utils
+    adwaita-icon-theme
+    xivlauncher
+    wine-staging
+    xclip
+    qbittorrent
+    btop
+    tmux
+    kitty-themes
+    jetbrains.idea
   ];
 
   # List services that you want to enable:

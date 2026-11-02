@@ -59,6 +59,19 @@ input {
         // middle-emulation
     }
 
+    tablet {
+        map-to-output "HDMI-A-1"
+        
+        // Optional: adjust calibration matrix with six floating-point numbers if needed
+        calibration-matrix 1.0 0.0 0.0 0.0 1.0 0.0
+    }
+
+       touch {
+        map-to-output "HDMI-A-1" // Replace with your actual Wacom screen output name
+    
+        calibration-matrix 1.0 0.0 0.0 0.0 1.0 0.0
+    }
+
     // Uncomment this to make the mouse warp to the center of newly focused windows.
     // warp-mouse-to-focus
 
@@ -75,7 +88,7 @@ input {
 // Remember to uncomment the node by removing "/-"!
 /-output "eDP-1" {
     // Uncomment this line to disable this output.
-    // off
+    off
 
     // Resolution and, optionally, refresh rate of the output.
     // The format is "<width>x<height>" or "<width>x<height>@<refresh rate>".
@@ -207,10 +220,10 @@ output "HDMI-A-1" {
     // for the resolution.
     // If the mode is omitted altogether or is invalid, niri will pick one automatically.
     // Run `niri msg outputs` while inside a niri instance to list all outputs and their modes.
-    mode "1920x1080@60.000"
+    mode "2560x1600@60.000"
 
     // You can use integer or fractional scale, for example use 1.5 for 150% scale.
-    scale 1
+    scale 1.0
 
     // Transform allows to rotate the output counter-clockwise, valid values are:
     // normal, 90, 180, 270, flipped, flipped-90, flipped-180 and flipped-270.
@@ -225,7 +238,7 @@ output "HDMI-A-1" {
     // so to put another output directly adjacent to it on the right, set its x to 1920.
     // If the position is unset or results in an overlap, the output is instead placed
     // automatically.
-    position x=0 y=-1440
+    position x=0 y=1440
 }
 
 
