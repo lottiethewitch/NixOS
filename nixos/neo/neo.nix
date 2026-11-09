@@ -216,6 +216,7 @@
     tmux
     kitty-themes
     jetbrains.idea
+    xwayland-satellite
   ];
 
   # List services that you want to enable:
