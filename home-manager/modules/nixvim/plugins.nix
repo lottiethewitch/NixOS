@@ -170,6 +170,8 @@
 
       marks.enable = true;
 
+      nvim-autopairs.enable = true;
+
       nvim-tree = {
         enable = true;
         autoLoad = true;
