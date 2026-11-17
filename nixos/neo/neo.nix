@@ -75,17 +75,10 @@
         swtpm.enable = true;
       };
     };
-    docker = {
-      enable = true;
-
-      rootless = {
-        enable = true;
-        setSocketVariable = true;
-      };
-    };
 
     podman = {
       enable = true;
+      dockerCompat = true;
       defaultNetwork.settings.dns_enabled = true;
     };
 
@@ -230,6 +223,7 @@
     jetbrains.idea
     xwayland-satellite
     podman-compose
+    distrobox
   ];
 
   # List services that you want to enable:
