@@ -229,6 +229,7 @@
     kitty-themes
     jetbrains.idea
     xwayland-satellite
+    podman-compose
   ];
 
   # List services that you want to enable:
