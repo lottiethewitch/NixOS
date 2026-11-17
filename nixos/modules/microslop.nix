@@ -5,9 +5,10 @@
     wineWow64Packages.full
     winetricks
     wine64
+    winboat
     bottles
     cabextract
     mono
-    geckodriver 
+    geckodriver
   ];
 }
