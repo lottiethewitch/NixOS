@@ -77,7 +77,19 @@
     };
     docker = {
       enable = true;
+
+      rootless = {
+        enable = true;
+        setSocketVariable = true;
+      };
     };
+
+    podman = {
+      enable = true;
+      dockerCompat = true;
+      defaultNetwork.settings.dns_enabled = true;
+    };
+
   };
   # Enable networking
   networking.networkmanager.enable = true;
@@ -180,6 +192,7 @@
       "networkmanager"
       "libvirtd"
       "docker"
+      "podman"
     ];
   };
   programs.firefox.enable = true;
