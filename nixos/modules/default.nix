@@ -17,6 +17,7 @@
     ./notes.nix
     ./onepass.nix
     ./postgres.nix
+    ./remote.nix
     ./steam.nix
     ./tablet.nix
     ./virt.nix
