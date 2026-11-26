@@ -91,6 +91,8 @@
     #media-session.enable = true;
   };
 
+  services.upower.enable = true;
+
   # Enable touchpad support (enabled default in most desktopManager).
   # services.xserver.libinput.enable = true;
 
