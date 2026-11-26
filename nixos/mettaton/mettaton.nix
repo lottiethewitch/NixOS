@@ -2,18 +2,24 @@
 # your system.  Help is available in the configuration.nix(5) man page
 # and in the NixOS manual (accessible by running ‘nixos-help’).
 
-{ inputs, config, pkgs, lib, ... }:
+{
+  inputs,
+  config,
+  pkgs,
+  lib,
+  ...
+}:
 
 {
-  imports =
-    [ # Include the results of the hardware scan.
-      ./hardware-configuration.nix
-      ../modules/lisp.nix
-	  ../modules/remote.nix
-	  ../modules/writing.nix
-	  ../modules/steam.nix
-	];
-  
+  imports = [
+    # Include the results of the hardware scan.
+    ./hardware-configuration.nix
+    ../modules/lisp.nix
+    ../modules/writing.nix
+    ../modules/steam.nix
+    ../modules/ui/niri.nix
+  ];
+
   # Bootloader.
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
@@ -21,8 +27,10 @@
   # Use latest kernel.
   boot.kernelPackages = pkgs.linuxPackages_latest;
 
-
-  nix.settings.experimental-features = [ "nix-command" "flakes" ];
+  nix.settings.experimental-features = [
+    "nix-command"
+    "flakes"
+  ];
 
   networking.hostName = "mettaton"; # Define your hostname.
   # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
@@ -56,10 +64,6 @@
   # You can disable this if you're only using the Wayland session.
   services.xserver.enable = true;
 
-  # Enable the KDE Plasma Desktop Environment.
-  services.displayManager.sddm.enable = true;
-  services.desktopManager.plasma6.enable = true;
-
   # Configure keymap in X11
   services.xserver.xkb = {
     layout = "us";
@@ -68,7 +72,6 @@
 
   # Enable CUPS to print documents.
   services.printing.enable = true;
-
 
   services.mullvad-vpn.enable = true;
 
@@ -88,18 +91,23 @@
     #media-session.enable = true;
   };
 
+  services.upower.enable = true;
+
   # Enable touchpad support (enabled default in most desktopManager).
   # services.xserver.libinput.enable = true;
 
   # Define a user account. Don't forget to set a password with ‘passwd’.
   users.users."lottie" = {
-	shell = pkgs.zsh;
+    shell = pkgs.zsh;
     isNormalUser = true;
     description = "lottie";
-    extraGroups = [ "networkmanager" "wheel" ];
+    extraGroups = [
+      "networkmanager"
+      "wheel"
+    ];
     packages = with pkgs; [
       kdePackages.kate
-    #  thunderbird
+      #  thunderbird
     ];
   };
 
@@ -107,24 +115,24 @@
   nixpkgs.config.allowUnfree = true;
 
   programs.zsh.enable = true;
-  
-  
+
   programs.git = {
     enable = true;
     config.user = {
-        name  = "lottie";
-        email = "lottiekxiv@proton.me";
+      name = "lottie";
+      email = "lottiekxiv@proton.me";
     };
   };
   # List packages installed in system profile. To search, run:
   # $ nix search wget
   environment.systemPackages = with pkgs; [
-  #  vim # Do not forget to add an editor to edit configuration.nix! The Nano editor is also installed by default.
-  #  wget
-	firefox-bin
-	obsidian
-	calibre
-	nfs-utils
+    #  vim # Do not forget to add an editor to edit configuration.nix! The Nano editor is also installed by default.
+    #  wget
+    firefox-bin
+    obsidian
+    calibre
+    nfs-utils
+    tmux
   ];
 
   # Some programs need SUID wrappers, can be configured further or are
