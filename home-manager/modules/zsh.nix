@@ -2,14 +2,14 @@
 {
 
   home.packages = [
-	pkgs.starship
+    pkgs.starship
   ];
 
   programs.zsh = {
     enable = true;
-	enableCompletion = true;
-	syntaxHighlighting.enable = true;
-	autosuggestion.enable = true;
+    enableCompletion = true;
+    syntaxHighlighting.enable = true;
+    autosuggestion.enable = true;
 
     shellAliases = {
       ll = "ls -l";
@@ -19,21 +19,19 @@
       dogit = "./home/lottie/Nix/nixscripts/gitcom.sh";
     };
 
-	plugins = [
-	
-	];
-	
-	
-	envExtra = ''
-	  export PATH=$PATH:/$HOME/bin
-	  eval "$(starship init zsh)"
-	  '';
+    plugins = [
 
-  
+    ];
+
+    envExtra = ''
+      	  export PATH=$PATH:/$HOME/bin
+      	  eval "$(starship init zsh)"
+    '';
+
   };
 
   programs.starship.enable = true;
- 
+
   programs.direnv = {
     enable = true;
     nix-direnv.enable = true;

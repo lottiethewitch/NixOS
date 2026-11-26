@@ -8,6 +8,7 @@
     ./art.nix
     ./comms.nix
     ./developer.nix
+    ./documentation.nix
     ./firefox.nix
     ./haxxor.nix
     ./microslop.nix
@@ -16,6 +17,7 @@
     ./notes.nix
     ./onepass.nix
     ./postgres.nix
+    ./remote.nix
     ./steam.nix
     ./tablet.nix
     ./virt.nix

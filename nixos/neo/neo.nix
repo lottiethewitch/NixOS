@@ -75,9 +75,13 @@
         swtpm.enable = true;
       };
     };
-    docker = {
+
+    podman = {
       enable = true;
+      dockerCompat = true;
+      defaultNetwork.settings.dns_enabled = true;
     };
+
   };
   # Enable networking
   networking.networkmanager.enable = true;
@@ -180,6 +184,7 @@
       "networkmanager"
       "libvirtd"
       "docker"
+      "podman"
     ];
   };
   programs.firefox.enable = true;
@@ -216,6 +221,9 @@
     tmux
     kitty-themes
     jetbrains.idea
+    xwayland-satellite
+    podman-compose
+    distrobox
   ];
 
   # List services that you want to enable:
